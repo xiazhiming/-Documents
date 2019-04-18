@@ -1,0 +1,168 @@
+   sidebar:{
+               '/dev/':[
+                   ['/dev/DevManual/','DevManual'],
+                   ['/dev/DevManual/hashgardcli/','hashgardcli'],
+                   {
+                       title: 'bank',
+                       children: [
+                           ['/dev/DevManual/hashgardcli/bank/','Bank Guide'],
+                           ['/dev/DevManual/hashgardcli/bank/account','account'],
+                           ['/dev/DevManual/hashgardcli/bank/send','send'],
+                           ['/dev/DevManual/hashgardcli/bank/sign','sign'],
+                           ['/dev/DevManual/hashgardcli/bank/multisign','multisign'],
+                           ['/dev/DevManual/hashgardcli/bank/broadcast','broadcast'],
+  
+                       ],
+                   },
+                    {
+                       title: 'distribution',
+                       children: [
+                           ['/dev/DevManual/hashgardcli/distribution/','Distribution Guide'],
+                           ['/dev/DevManual/hashgardcli/distribution/params','params'],
+                           ['/dev/DevManual/hashgardcli/distribution/outstanding-rewards','outstanding-rewards'],
+                           ['/dev/DevManual/hashgardcli/distribution/commission','commission'],
+                           ['/dev/DevManual/hashgardcli/distribution/slashes','slashes'],
+                           ['/dev/DevManual/hashgardcli/distribution/rewards','rewards'],
+                           ['/dev/DevManual/hashgardcli/distribution/set-withdraw-address','set-withdraw-address'],
+                           ['/dev/DevManual/hashgardcli/distribution/withdraw-rewards','withdraw-rewards'],
+                       ],
+                   },
+                    {
+                       title: 'gov',
+                       children: [
+                           ['/dev/DevManual/hashgardcli/gov/','Gov Guide'],
+                           ['/dev/DevManual/hashgardcli/gov/proposal','proposal'],
+                           ['/dev/DevManual/hashgardcli/gov/proposals','proposals'],
+                           ['/dev/DevManual/hashgardcli/gov/query-vote','query-vote'],
+                           ['/dev/DevManual/hashgardcli/gov/query-votes','query-votes'],
+                           ['/dev/DevManual/hashgardcli/gov/query-deposit','query-deposit'],
+                           ['/dev/DevManual/hashgardcli/gov/query-deposits','query-deposits'],
+                           ['/dev/DevManual/hashgardcli/gov/tally','tally'],
+                           ['/dev/DevManual/hashgardcli/gov/param','param'],
+                           ['/dev/DevManual/hashgardcli/gov/submit-proposal','submit-proposal'],
+                           ['/dev/DevManual/hashgardcli/gov/deposit','deposit'],
+                           ['/dev/DevManual/hashgardcli/gov/vote','vote'],
+  
+                       ],
+                   },
+                    {
+                       title: 'keys',
+                       children: [
+                           ['/dev/DevManual/hashgardcli/keys/','Keys Guide'],
+                           ['/dev/DevManual/hashgardcli/keys/mnemonic','mnemonic'],
+                           ['/dev/DevManual/hashgardcli/keys/add','add'],
+                           ['/dev/DevManual/hashgardcli/keys/list','list'],
+                           ['/dev/DevManual/hashgardcli/keys/show','show'],
+                           ['/dev/DevManual/hashgardcli/keys/delete','delete'],
+                           ['/dev/DevManual/hashgardcli/keys/update','update'],
+  
+  
+                       ],
+                   },
+                    {
+                       title: 'stake',
+                       children: [
+                           ['/dev/DevManual/hashgardcli/stake/','Stake Guide'],
+                           ['/dev/DevManual/hashgardcli/stake/validator','validator'],
+                           ['/dev/DevManual/hashgardcli/stake/validators','validators'],
+                           ['/dev/DevManual/hashgardcli/stake/delegation','delegation'],
+                           ['/dev/DevManual/hashgardcli/stake/delegations','delegations'],
+                           ['/dev/DevManual/hashgardcli/stake/delegations-to','delegations-to'],
+                           ['/dev/DevManual/hashgardcli/stake/unbonding-delegation','unbonding-delegation'],
+                           ['/dev/DevManual/hashgardcli/stake/unbonding-delegations','unbonding-delegations'],
+                           ['/dev/DevManual/hashgardcli/stake/unbonding-delegations-from','unbonding-delegations-from'],
+                           ['/dev/DevManual/hashgardcli/stake/redelegation','redelegation'],
+                           ['/dev/DevManual/hashgardcli/stake/redelegations','redelegations'],
+                           ['/dev/DevManual/hashgardcli/stake/redelegations-from','redelegations-from'],
+                           ['/dev/DevManual/hashgardcli/stake/pool','pool'],
+                           ['/dev/DevManual/hashgardcli/stake/params','params'],
+                           ['/dev/DevManual/hashgardcli/stake/create-validator','create-validator'],
+                           ['/dev/DevManual/hashgardcli/stake/edit-validator','edit-validator'],
+                           ['/dev/DevManual/hashgardcli/stake/delegate','delegate'],
+                           ['/dev/DevManual/hashgardcli/stake/unbond','unbond'],
+                           ['/dev/DevManual/hashgardcli/stake/redelegate','redelegate'],
+  
+                       ],
+                   },
+  
+                           ['/dev/DevManual/hashgardcli/status','status'],
+  
+  
+                   {
+                       title: 'tendermint',
+                       children: [
+                           ['/dev/DevManual/hashgardcli/tendermint/','tendermint Guide'],
+                           ['/dev/DevManual/hashgardcli/tendermint/block','block'],
+                           ['/dev/DevManual/hashgardcli/tendermint/tendermint-validator-set','vtendermint-validator-set'],
+                           ['/dev/DevManual/hashgardcli/tendermint/txs','txs'],
+                           ['/dev/DevManual/hashgardcli/tendermint/tx','tx'],
+  
+  
+                       ],
+                   },
+                   {
+                       title: 'slashing',
+                       children: [
+                           ['/dev/DevManual/hashgardcli/slashing/','slashing Guide'],
+                           ['/dev/DevManual/hashgardcli/slashing/signing-info','signing-info'],
+                           ['/dev/DevManual/hashgardcli/slashing/params','params'],
+                           ['/dev/DevManual/hashgardcli/slashing/unjail','unjail'],
+                       ],
+                   },
+  
+                    {
+                       title: 'hashgard',
+                       children: [
+                           ['/dev/DevManual/hashgard/','Hashgard Guid'],
+                           ['/dev/DevManual/hashgard/init','hashgard init'],                          
+                           ['/dev/DevManual/hashgard/gentx','hashgard gentx'],
+                           ['/dev/DevManual/hashgard/collect-gentxs','hashgard collect-gentxs'],
+                           ['/dev/DevManual/hashgard/validate-genesis','hashgard validate-genesis'],
+                           ['/dev/DevManual/hashgard/start','hashgard start'],
+                           ['/dev/DevManual/hashgard/testnet','hashgard testnet'],
+                           ['/dev/DevManual/hashgard/unsafe-reset-all','hashgard unsafe-reset-all'],
+                           ['/dev/DevManual/hashgard/export','hashgard export'],
+                           ['/dev/DevManual/hashgard/tendermint','hashgard tendermint'],
+  
+                       ],
+                   },
+                     ['/dev/DevManual/hashgardlcd/','hashgardlcd'],
+               ],
+                '/learn/':[
+                {
+                       title: 'Overview',
+                       children: [
+                          ['/learn/Overview/introduction','who is Hashgard'],
+                          ['/learn/Overview/howToContribute','howToContribute'],
+                       ],
+                   },
+                   {
+                       title: 'UserssGuide',
+                       children: [
+                          ['/learn/UserssGuide/WebWalletGuide','WebWalletGuide'],
+                          ['/learn/UserssGuide/hashgardExplorerGuide','ExplorerGuide'],
+                          ['/learn/UserssGuide/hashgardNav','hashgardNav'],
+  
+                       ],
+                   },
+  
+                   ['/learn/Quickstart','Quickstart'],
+                   {
+                       title: 'Guide',
+                       children: [
+                         ['/learn/Guide/installation','installation'],
+                         ['/learn/Guide/','Test network'],
+                         ['/learn/Guide/genesis','genesis'],
+                         ['/learn/Guide/GreateValidator','GreateValidator'],
+                         ['/learn/Guide/GovDeposit ','GovDeposit '],
+                         ['/learn/Guide/unbond','Unbond'],
+                         ['/learn/Guide/GovProposal','GovProposal'],
+                         ['/learn/Guide/StakeValidators','StakeValidators'],
+                         ['/learn/Guide/StakeValidators','StakeValidators'],
+                         ['/learn/Guide/StakeRedelegate','StakeRedelegate'],
+                         ['/learn/Guide/AccountGuide','AccountGuide'],
+  
+                       ],
+                   },
+                ],
+               },

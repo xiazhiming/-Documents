@@ -1,0 +1,23 @@
+{
+  "name": "document",
+  "version": "1.0.0",
+  "description": "harhgard",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiazhiming/Documents.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiazhiming/Documents/issues"
+  },
+  "homepage": "https://github.com/xiazhiming/Documents#readme",
+  "devDependencies": {
+    "vuepress": "^0.14.11"
+  }
+}
