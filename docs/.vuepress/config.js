@@ -18,7 +18,7 @@ module.exports = {
            }
        },
     themeConfig: {
-     repo: 'vuejs/vuepress',
+     repo: 'xiazhiming/Documents',
       locales: {
         '/en/': {
           selectText: 'Languages',
