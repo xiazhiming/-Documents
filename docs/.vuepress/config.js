@@ -18,7 +18,7 @@ module.exports = {
            }
        },
     themeConfig: {
-
+     repo: 'vuejs/vuepress',
       locales: {
         '/en/': {
           selectText: 'Languages',
