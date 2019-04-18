@@ -1,5 +1,5 @@
 module.exports = {
-    base : '/Docments/',
+    base : '/',
     markdown: {
        lineNumbers: false // 代码块显示行号
    },
