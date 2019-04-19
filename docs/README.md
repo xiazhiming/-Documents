@@ -28,7 +28,7 @@
 
 ### Hashgard 导航
 
-查看hashgard[导航](/Guide/UserssGuide/hashgardNav)
+查看hashgard[导航](/learn/UsersGuide/hashgardNav.md)
 
 
 
