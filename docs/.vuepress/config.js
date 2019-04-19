@@ -9,14 +9,17 @@ module.exports = {
            '/en/': {
                title:"Hashgard Documentation",
                lang: 'en-US',
-               description: 'Hashgard Documentation'
+               description: 'Welcome to the hashgard documentation'
            },
            '/': {
                title:"Hashgard Documentation",
-               lang: 'zh-CN',
-               description: 'Hashgard Documentation'
+               lang:'zh-CN',
+               description:'欢迎来到hashgard文档中心'
            }
        },
+       head: [
+    ['link', { rel:'icon', href:'/favicon.ico' }]
+  ],
     themeConfig: {
      repo: 'xiazhiming/Documents',
      editLinks: true,

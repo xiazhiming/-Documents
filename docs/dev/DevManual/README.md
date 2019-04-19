@@ -1,6 +1,6 @@
 # hashgardcli
 
-包含 hashgardcli 的操作帮助文档，[点击](./hashgardcli)查看
+包含 hashgardcli 的操作帮助文档，[点击](./hashgardcli/)查看
 
 其中包含的模块列表：
 
