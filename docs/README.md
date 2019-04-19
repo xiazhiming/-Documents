@@ -1,18 +1,36 @@
----
-home: true
-heroImage: /logo.svg
-actionText: 快速上手 →
-actionLink: /learn/Quickstart
-features:
-- title: 专注金融领域
-  details: 对金融需求的痛点研究，定制化的企业金融模块。
-- title: 高扩展
-  details: 优秀的拓展技术，与Cosmos IRIS等项目紧密关联
-- title: 高性能 门槛低
-  details: 新一代智能金融公链，满足企业金融系统要求，从底层支持各项金融服务需求。
+## 欢迎来到Harhgard 文档中心
 
 
 
 
-footer: MIT Licensed | Copyright © 2018-hashgard
----
+
+> hashgard是一个智能金融服务的区块链基础设施，可用自由的定制金融内部，金融联盟等金融服务基础设施，有效解决企业内部的票据、存证、资产管理、金融监管和证券交易的需求。从区块链底层提供适合于金融服务的共享账本技术。也可以自由的与COSMOS、IRIS等跨链中心相连，通往自由的数字时代。主要推动组织由新加坡hashgard基金会推动，全球开源化社区进行推动。
+
+
+
+###  教程
+
+点击查看[教程](/learn/)
+
+
+
+### 开发文档
+
+点击查看[开发手册](/dev/)
+
+
+
+### 测试贡献
+
+加入测试网络[测试任务](/test/)
+
+
+
+### Hashgard 导航
+
+查看hashgard[导航](/Guide/UserssGuide/hashgardNav)
+
+
+
+
+

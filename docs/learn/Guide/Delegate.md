@@ -16,3 +16,4 @@ hashgardcli stake delegate --validator=${validator_address} --amount=${amount}  
 ```bash
 hashgardcli stake validator ${validator_address}  --trust-node
 ```
+

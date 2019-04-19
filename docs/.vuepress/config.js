@@ -39,7 +39,8 @@ module.exports = {
           algolia: {},
           nav:[
                { text: 'Guide', link:'/en/learn/'},
-               { text: 'DEV', link:'/en/dev/'},
+               { text: 'Dev', link:'/en/dev/'},
+               { text: 'Test', link: '/en/test/' },
 
            ],
            sidebar:{
@@ -182,11 +183,11 @@ module.exports = {
                        ],
                    },
                    {
-                       title: 'UserssGuide',
+                       title: 'UsersGuide',
                        children: [
-                          ['/en/learn/UserssGuide/WebWalletGuide','WebWalletGuide'],
-                          ['/en/learn/UserssGuide/hashgardExplorerGuide','ExplorerGuide'],
-                          ['/en/learn/UserssGuide/hashgardNav','hashgardNav'],
+                          ['/en/learn/UsersGuide/WebWalletGuide','WebWalletGuide'],
+                          ['/en/learn/UsersGuide/hashgardExplorerGuide','ExplorerGuide'],
+                          ['/en/learn/UsersGuide/hashgardNav','hashgardNav'],
 
                        ],
                    },
@@ -212,7 +213,15 @@ module.exports = {
                        ],
                    },
                 ],
+                '/en/test/':[
+                  ['/en/test/','Start'],
+                  ['/en/test/sif-1000/','sif-1000'],
+                  ['/en/test/sif-2000/','sif-2000'],
+                  ['/en/test/sif-3001/','sif-3001'],
+
+                ],
                },
+
                sidebarDepth: 1, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
                lastUpdated: 'Last Updated' ,// 文档更新时间：每个文件git最后提交的时间,
 
@@ -239,6 +248,7 @@ module.exports = {
                 // [以 '/' 结尾的默认指向该路径下README.md文件]
                { text: '教程', link: '/learn/' },
                { text: '开发', link: '/dev/' },
+               { text: '测试', link: '/test/' },
 
            ],
               sidebar:{
@@ -371,6 +381,12 @@ module.exports = {
                    },
                      ['/dev/command/hashgardlcd/','hashgardlcd'],
                ],
+               '/test/':[
+                 ['/test/','起步'],
+                 ['/test/sif-1000/','sif-1000'],
+                 ['/test/sif-2000/','sif-2000'],
+                 ['/test/sif-3001/','sif-3001'],
+               ],
                 '/learn/':[
                 {
                        title: '总览',
@@ -382,9 +398,9 @@ module.exports = {
                    {
                        title: '用户使用指南',
                        children: [
-                          ['/learn/UserssGuide/WebWalletGuide','网页钱包使用指南'],
-                          ['/learn/UserssGuide/hashgardExplorerGuide','浏览器使用指南'],
-                          ['/learn/UserssGuide/hashgardNav','hashgard导航'],
+                          ['/learn/UsersGuide/WebWalletGuide','网页钱包使用指南'],
+                          ['/learn/UsersGuide/hashgardExplorerGuide','浏览器使用指南'],
+                          ['/learn/UsersGuide/hashgardNav','hashgard导航'],
 
                        ],
                    },
@@ -402,9 +418,7 @@ module.exports = {
                          ['/learn/Guide/Redelegate','Redelegate'],
                          ['/learn/Guide/SubmitProposal','SubmitProposal'],
                          ['/learn/Guide/unbond','unbond'],
-                          ['/learn/Guide/Vote','Vote'],
-
-
+                          ['/learn/Guide/Vote','Vote']
                        ],
                    },
                 ],
