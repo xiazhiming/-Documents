@@ -6,7 +6,7 @@ Hashgard文档库是所有Hashgard所有文档的集合，你可以在这里静�
 
 
 
-# hashgardcli
+## hashgardcli
 
 
 
@@ -21,7 +21,7 @@ Hashgard文档库是所有Hashgard所有文档的集合，你可以在这里静�
 
 
 
-# hashgard
+## hashgard
 
 
 
@@ -38,13 +38,20 @@ Hashgard文档库是所有Hashgard所有文档的集合，你可以在这里静�
 
 
 
-# hashgardlcd
+## hashgardlcd
 
 1.[hashgardlcd](./hashgardlcd/)
 
 
 
-## 核心模块
+## CoreModule
 
-- [CoreModule](./CoreModule/)
+1.[TonkenGreate-HRC10](./CoreModule/TonkenGreate-HRC10.md)
 
+2.[AtomicSwap-HRC11](./CoreModule/AtomicSwap-HRC11.md)
+
+3.[DepositForwardPay-HRC12](./CoreModule/DepositForwardPay-HRC12.md)
+
+4.[Dividend-HRC13](./CoreModule/Dividend-HRC13.md)
+
+5.[Alias-HRC14](./CoreModule/Alias-HRC14.md)
