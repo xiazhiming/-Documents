@@ -1,8 +1,6 @@
 # hashgardcli
 
-包含 hashgardcli 的操作帮助文档，[点击](./hashgardcli/)查看
 
-其中包含的模块列表：
 
 1. [bank command](./hashgardcli/bank/)
 2. [distribution command](./hashgardcli/distribution)
@@ -13,11 +11,11 @@
 7. [tendermint command](./hashgardcli/tendermint)
 8. [slashing command](./hashgardcli/slashing)
 
+
+
 # hashgard
 
-包含 hashgard 的操作帮助文档，[点击](./hashgard)查看
 
-其中包含的模块列表：
 
 1. [init command](./hashgard/init.md)
 2. [add-genesis-account command](./hashgard/add-genesis-account.md)
@@ -30,6 +28,9 @@
 9. [export command](./hashgard/export.md)
 10. [tendermint command](./hashgard/tendermint.md)
 
+
+
 # hashgardlcd
+
 1.[hashgardlcd](./hashgardlcd/)
 

@@ -40,8 +40,7 @@ module.exports = {
           nav:[
                { text: 'Guide', link:'/en/learn/'},
                { text: 'Dev', link:'/en/dev/'},
-               { text: 'Test', link: '/en/test/' },
-
+               { text: 'Test', link: '/en/test/' }
            ],
            sidebar:{
                '/en/dev/':[
@@ -179,39 +178,33 @@ module.exports = {
                        title: 'Overview',
                        children: [
                           ['/en/learn/Overview/introduction','who is Hashgard'],
-                          ['/en/learn/Overview/howToContribute','howToContribute'],
-                       ],
+                          ['/en/learn/Overview/howToContribute','howToContribute']
+                       ]
                    },
                    {
                        title: 'UsersGuide',
                        children: [
                           ['/en/learn/UsersGuide/WebWalletGuide','WebWalletGuide'],
                           ['/en/learn/UsersGuide/hashgardExplorerGuide','ExplorerGuide'],
-                          ['/en/learn/UsersGuide/hashgardNav','hashgardNav'],
-
-                       ],
+                          ['/en/learn/UsersGuide/hashgardNav','hashgardNav']
+                       ]
                    },
-
-                   ['/en/learn/Quickstart','Quickstart'],
                    {
                        title: 'Guide',
                        children: [
+                         ['/en/learn/Guide/installation','installation'],
                          ['/en/learn/Guide/AccountGuide','AccountGuide'],
                          ['/en/learn/Guide/','testnet Guide'],
                          ['/en/learn/Guide/Delegate','Delegate'],
-
                          ['/en/learn/Guide/Deposit','Deposit'],
                          ['/en/learn/Guide/genesis','genesis'],
                          ['/en/learn/Guide/GreatValidator','GreatValidator'],
-                         ['/en/learn/Guide/installation','installation'],
                          ['/en/learn/Guide/Redelegate','Redelegate'],
                          ['/en/learn/Guide/SubmitProposal','SubmitProposal'],
                          ['/en/learn/Guide/unbond','unbond'],
-                          ['/en/learn/Guide/Vote','Vote'],
-
-
-                       ],
-                   },
+                          ['/en/learn/Guide/Vote','Vote']
+                       ]
+                   }
                 ],
                 '/en/test/':[
                   ['/en/test/','Start'],
@@ -404,21 +397,21 @@ module.exports = {
 
                        ],
                    },
-                   ['/learn/Quickstart','快速启动'],
+
                    {
                        title: '教程',
                        children: [
-                          ['/learn/Guide/AccountGuide','账户类型说明'],
+                         ['/learn/Guide/installation','安装hashgard'],
+                         ['/learn/Guide/AccountGuide','账户类型说明'],
                          ['/learn/Guide/','测试网络指南'],
-                         ['/learn/Guide/Delegate','Delegate'],
-                         ['/learn/Guide/Deposit','Deposit'],
-                         ['/learn/Guide/genesis','genesis'],
-                         ['/learn/Guide/GreatValidator','GreatValidator'],
-                         ['/learn/Guide/installation','installation'],
-                         ['/learn/Guide/Redelegate','Redelegate'],
-                         ['/learn/Guide/SubmitProposal','SubmitProposal'],
-                         ['/learn/Guide/unbond','unbond'],
-                          ['/learn/Guide/Vote','Vote']
+                         ['/learn/Guide/Delegate','委托'],
+                         ['/learn/Guide/Deposit','抵押'],
+                         ['/learn/Guide/genesis','创建节点'],
+                         ['/learn/Guide/GreatValidator','创建验证人节点'],
+                         ['/learn/Guide/SubmitProposal','提交在线治理'],
+                         ['/learn/Guide/Redelegate','重新委托'],
+                         ['/learn/Guide/unbond','解绑委托'],
+                         ['/learn/Guide/Vote','投票']
                        ],
                    },
                 ],

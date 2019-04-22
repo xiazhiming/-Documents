@@ -1,4 +1,4 @@
-## [Hashgard账户地址说明]()
+## Hashgard账户地址说明
 
 
 

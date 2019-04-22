@@ -16,3 +16,4 @@ hashgard 服务启动端
 8. [hashgad unsafe-reset-all ](./unsafe-reset-all.md)
 9. [hashgad export ](./export.md)
 10. [hashgad tendermint ](./tendermint.md)
+

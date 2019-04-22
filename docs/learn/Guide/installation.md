@@ -4,8 +4,8 @@ Hashgard 公链采用 Go 语言编写，它可以在任何能够编译并运行 
 
 根据本文档，您将安装两个可执行程序：
 
-1. [hashgard](/command/hashgard/)，这是 Hashgard 节点的主程序，它将作为系统服务运行并接入 Hashgard 网络。
-2. [hashgardcli](/command/hashgardcli/)，这是 Hashgard 命令行客户端，用来执行大部分命令，如创建钱包、发送交易等。
+1. [hashgard](/dev/command/hashgard/)，这是 Hashgard 节点的主程序，它将作为系统服务运行并接入 Hashgard 网络。
+2. [hashgardcli](/dev/command/hashgardcli/)，这是 Hashgard 命令行客户端，用来执行大部分命令，如创建钱包、发送交易等。
 
 ## 配置您的服务器
 

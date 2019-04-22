@@ -1,8 +1,10 @@
 ## hashgardNav
 
+
+
 ### 官方
 
-[官网](https://www.hashgard.pro/#/)
+[官网](https://www.hashgard.io/#/)
 
 [企业服务官网](https://www.hashgard.com/)
 
@@ -11,6 +13,8 @@
 [GitHub](https://github.com/hashgard/)
 
 [白皮书](https://github.com/hashgard/whitepaper/blob/master/%E7%99%BD%E7%9A%AE%E4%B9%A6.md)
+
+
 
 ### 社区
 
@@ -27,4 +31,16 @@
 Wechat
 
 
+
+### 交易市场
+
+[Gete.io](https://www.gate.io/trade/GARD_USDT)
+
+[hotbit](https://www.hotbit.io/exchange?symbol=GARD_BTC)
+
+[bgogo](https://bgogo.com/exchange/GARD/BTC)
+
+[coinmex](https://www.coinmex.com/spot/gard_eth)
+
+[dcoin](https://www.dcoin.com/currencyTrading/GARD_ETH)
 
