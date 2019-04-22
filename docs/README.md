@@ -12,12 +12,6 @@
 
 点击查看[教程](learn/README.md)
 
-点击查看[教程](/learn/README.md)
-
-点击查看[教程](./learn/README.md)
-
-点击查看[教程](../learn/README.md)
-
 
 
 ### 开发文档
