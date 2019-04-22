@@ -54,7 +54,7 @@ hashgardcli config output json
 hashgard init --chain-id=sif-3001 --moniker=${your_node_name}
 ```
 
-如果您想在 genisis 阶段成为验证人，您可以按照文档 [参与 genesis](../laern/Guide/genesis.md) 来生成一个 json 文件，并提交给我们。
+如果您想在 genisis 阶段成为验证人，您可以按照文档 [参与 genesis](../learn/Guide/genesis.md) 来生成一个 json 文件，并提交给我们。
 或者，您可以随后再发送相关交易，同样可以升级为验证人节点。
 
 
