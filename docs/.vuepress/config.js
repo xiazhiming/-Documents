@@ -62,7 +62,7 @@ module.exports = {
                 {
                     title: 'Guide',
                     children: [
-                      ['/en/learn/Guide/installation','installation'],
+                      ['/en/learn/installation','installation'],
                       ['/en/learn/Guide/AccountGuide','AccountGuide'],
                       ['/en/learn/Guide/','testnet Guide'],
                       ['/en/learn/Guide/Delegate','Delegate'],
@@ -401,7 +401,7 @@ module.exports = {
                    {
                        title: '教程',
                        children: [
-                         ['/learn/Guide/installation','安装hashgard'],
+                         ['/learn/installation','安装hashgard'],
                          ['/learn/Guide/AccountGuide','账户类型说明'],
                          ['/learn/Guide/','测试网络指南'],
                          ['/learn/Guide/genesis','创建节点'],
