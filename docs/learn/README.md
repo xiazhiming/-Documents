@@ -2,7 +2,7 @@
 
 ### 开始
 
--  参看[安装文档](./Guide/installation.md)
+-  参看[安装文档](./installation.md)
 
 ### 资源
 
