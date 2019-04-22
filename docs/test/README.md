@@ -168,7 +168,7 @@ hashgardcli status
 
 如何发起提案？进入[发起治理提案](../learn/Guide/SubmitProposal.md)
 
-提案时需要进入激活状态才能发起投票，在此之前，您可以进行[抵押存款](../learn/Guide/Deposit..md)
+提案时需要进入激活状态才能发起投票，在此之前，您可以进行[抵押存款](../learn/Guide/Deposit.md)
 
 对于被正式被激活的提案，您可以对其进行[投票](../learn/Guide/Vote.md)
 
