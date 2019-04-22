@@ -16,7 +16,7 @@
 
 ### 开发文档
 
-点击查看[开发手册](dev/README.md)
+点击查看[开发手册](command/README.md)
 
 
 
