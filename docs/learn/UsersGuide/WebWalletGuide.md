@@ -1,4 +1,4 @@
-## GardBox Web钱包使用指南
+# GardBox Web钱包使用指南
 
 首先进入[GardBox](https://wallet.hashgard.pro)
 

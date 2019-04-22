@@ -2,7 +2,7 @@
 
 首先进入[hashgard plorer](https://www.gardplorer.io/)
 
-## 什么是Hashgard plorer
+# 什么是Hashgard plorer
 
 Hashgard浏览器是Hashgard核心团队开发的网页版图形化的用户界面，为您提供Hashgard区块链查询及交互。通过Hashgard浏览器，您可以浏览到整个Hashgard区块链的基本信息，已添加到网络中的账户，交易，合约等相关信息。
 

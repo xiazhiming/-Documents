@@ -22,6 +22,7 @@ module.exports = {
   ],
     themeConfig: {
      repo: 'xiazhiming/Documents',
+     docsDir: 'docs',
      editLinks: true,
     // 默认为 "Edit this page"
     editLinkText: '帮助我们改善此页面！',
