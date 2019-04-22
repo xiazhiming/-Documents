@@ -6,7 +6,7 @@
 
 ### 资源
 
-- [开发手册](/dev/README.md)
+- [开发手册](./dev/README.md)
 - [测试网络](/test/)
 
 
