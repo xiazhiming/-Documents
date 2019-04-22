@@ -13,10 +13,10 @@
 
 ### hashgard
 
-- [创建钱包](/dev/command/hashgardcli/keys/add.md)
-- [创建节点](/learn/Guide/genesis.md)
-- [升级节点为验证节点](/learn/Guide/GreatValidator.md)
-- [进行投票](/learn/Guide/gov.md)
+- [创建钱包](../dev/command/hashgardcli/keys/add.md)
+- [创建节点](../learn/Guide/genesis.md)
+- [升级节点为验证节点](../learn/Guide/GreatValidator.md)
+- [进行投票](../learn/Guide/gov.md)
 
 
 
