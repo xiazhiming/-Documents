@@ -10,7 +10,7 @@
 
 ## 测试币领取方式
 
-请参考[测试币](../dev/command/hashgard/Faucet.md) 进行测试币领取。
+请参考[测试币](dev/command/hashgard/Faucet.md) 进行测试币领取。
 
 
 

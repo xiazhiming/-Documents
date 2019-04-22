@@ -10,7 +10,7 @@
 
 ###  教程
 
-点击查看[教程](../learn/README.md)
+点击查看[教程](learn/README.md)
 
 
 
