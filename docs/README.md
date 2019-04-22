@@ -10,13 +10,13 @@
 
 ###  教程
 
-点击查看[教程](/learn/README.md)
+点击查看[教程](./learn/README.md)
 
 
 
 ### 开发文档
 
-点击查看[开发手册](../dev/README.md)
+点击查看[开发手册](./dev/README.md)
 
 
 
@@ -28,7 +28,7 @@
 
 ### Hashgard 导航
 
-查看hashgard[导航](/learn/UsersGuide/hashgardNav.md)
+查看hashgard[导航](./learn/UsersGuide/hashgardNav.md)
 
 
 
