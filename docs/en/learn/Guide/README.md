@@ -1,30 +1,20 @@
 # Hashgard 测试网指南
 
-
-
 该文档目的是介绍如何运行一个 Hashgard 节点并加入当前的测试网。
 
-> 当前为 sif-3001 测试网络，请务必指定 chain-id = sif-3001
+>  chain-id = sif-3001    sif-3001 是测试网络ID，测试任务需要确定ID来进行
 
 > \${}代表变量，需要你手动替换成你自己设定的值
 
-
-
 ## 运行 Hashgard 节点
-
-
 
 ### 步骤 1：在您的服务器上安装 Hashgard
 
-请参照 [hashgard安装文档](installation.md)  安装 Hashgard。
-
-
+请参照 [hashgard 安装文档](installation.md) 安装 Hashgard。
 
 ### 步骤 2：创建钱包
 
 如果尚未创建钱包，请参照 [钱包创建文档](/command/hashgardcli/keys/add.md) 创建钱包。
-
-
 
 ### 步骤 3：设置默认参数
 
@@ -42,8 +32,6 @@ hashgardcli config indent true
 hashgardcli config output json
 ```
 
-
-
 ### 步骤 4：初始化节点并获取配置文件
 
 #### 4.1：初始化节点
@@ -52,10 +40,8 @@ hashgardcli config output json
 hashgard init --chain-id=sif-3001 --moniker=${your_node_name}
 ```
 
-如果您想在 genisis 阶段成为验证人，您可以按照文档 [参与 genesis](参与genesis.md) 来生成一个 json 文件，并提交给我们。
+如果您想在 genisis 阶段成为验证人，您可以按照文档 [参与 genesis](genesis.md) 来生成一个 json 文件，并提交给我们。
 或者，您可以随后再发送相关交易，同样可以升级为验证人节点。
-
-
 
 #### 4.2：下载 genesis 和 config 文件
 
@@ -71,8 +57,6 @@ wget https://raw.githubusercontent.com/hashgard/testnets/master/sif/sif-3001/con
 
 上面命令中的 \$HASHGARDHOME 默认是 `~/.hashgard`，
 
-
-
 #### 4.3: 修改配置文件
 
 编辑 `$HASHGARDHOME/config/config.toml` 文件，
@@ -84,8 +68,6 @@ wget https://raw.githubusercontent.com/hashgard/testnets/master/sif/sif-3001/con
 moniker = "${your_node_name}"
 external_address = "${your_public_ip}:26656"
 ```
-
-
 
 ### 步骤 5：运行完整节点
 
@@ -144,15 +126,9 @@ hashgardcli status
 
 您现在已经成功运行了一个 Hashgard 完整节点并接入了 sif-3001 测试网。
 
-您已经完成了测试网第一个激励任务，接下来您可以根据 [激励任务说明](./sif/sif-3001/README.md) 参与后续步骤完成其它激励任务。
-
-
-
 ## 后续步骤
 
 您现在拥有一个活动的完整节点。下一步是什么？
-
-
 
 ### 步骤 5：升级到验证人( Validator )节点
 
@@ -161,8 +137,6 @@ hashgardcli status
 如果您错过了 genesis 文件生成过程，您仍然可以将您的节点升级成为 Hashgard 验证人节点，继续进入 [创建验证人节点](创建验证人节点.md)。
 
 您也可以[委托](委托代币.md)，[解绑](解绑委托.md)，[再委托](重新委托.md)
-
-
 
 ### 步骤 6：链式治理
 

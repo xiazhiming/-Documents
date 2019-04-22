@@ -10,7 +10,7 @@
 
 ## 测试币领取方式
 
-请参考[测试币](../dev/command/hashgard/Faucet.md) 进行测试币领取。
+请参考[测试币](../command/hashgard/Faucet.md) 进行测试币领取。
 
 
 
@@ -24,7 +24,7 @@
 
 ### 步骤 2：创建钱包
 
-如果尚未创建钱包，请参照 [钱包创建文档](../dev/command/hashgardcli/keys/add.md) 创建钱包。
+如果尚未创建钱包，请参照 [钱包创建文档](../command/hashgardcli/keys/add.md) 创建钱包。
 
 
 
