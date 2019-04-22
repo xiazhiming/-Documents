@@ -11,12 +11,15 @@
 
 
 
-### hashgard
+### 用户使用指南
 
-- [创建钱包](../dev/command/hashgardcli/keys/add.md)
-- [创建节点](../learn/Guide/genesis.md)
-- [升级节点为验证节点](../learn/Guide/GreatValidator.md)
-- [进行投票](../learn/Guide/gov.md)
+- 参看[用户指南](UsersGuide/README.md)
+
+
+
+### 教程
+
+- 参看[教程](Guide/README.md)
 
 
 
