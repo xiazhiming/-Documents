@@ -43,7 +43,40 @@ module.exports = {
                { text: 'Test', link: '/en/test/' }
            ],
            sidebar:{
-               '/en/':[
+             '/en/learn/':[
+             {
+                    title: 'Overview',
+                    children: [
+                       ['/en/learn/introduction','who is Hashgard'],
+                       ['/en/learn/howToContribute','how To Contribute']
+                    ]
+                },
+                {
+                    title: 'UsersGuide',
+                    children: [
+                       ['/en/learn/UsersGuide/WebWalletGuide','WebWalletGuide'],
+                       ['/en/learn/UsersGuide/hashgardExplorerGuide','ExplorerGuide'],
+                       ['/en/learn/UsersGuide/hashgardNav','hashgardNav']
+                    ]
+                },
+                {
+                    title: 'Guide',
+                    children: [
+                      ['/en/learn/Guide/installation','installation'],
+                      ['/en/learn/Guide/AccountGuide','AccountGuide'],
+                      ['/en/learn/Guide/','testnet Guide'],
+                      ['/en/learn/Guide/Delegate','Delegate'],
+                      ['/en/learn/Guide/Deposit','Deposit'],
+                      ['/en/learn/Guide/genesis','genesis'],
+                      ['/en/learn/Guide/GreatValidator','GreatValidator'],
+                      ['/en/learn/Guide/Redelegate','Redelegate'],
+                      ['/en/learn/Guide/SubmitProposal','SubmitProposal'],
+                      ['/en/learn/Guide/unbond','unbond'],
+                       ['/en/learn/Guide/Vote','Vote']
+                    ]
+                }
+             ],
+               '/en/command':[
                    ['/en/command/','command'],
                    ['/en/command/hashgardcli/','hashgardcli'],
                    {
@@ -173,46 +206,13 @@ module.exports = {
                    },
                      ['/en/command/hashgardlcd/','hashgardlcd'],
                ],
-                '/en/learn/':[
-                {
-                       title: 'Overview',
-                       children: [
-                          ['/en/learn/Overview/introduction','who is Hashgard'],
-                          ['/en/learn/Overview/howToContribute','howToContribute']
-                       ]
-                   },
-                   {
-                       title: 'UsersGuide',
-                       children: [
-                          ['/en/learn/UsersGuide/WebWalletGuide','WebWalletGuide'],
-                          ['/en/learn/UsersGuide/hashgardExplorerGuide','ExplorerGuide'],
-                          ['/en/learn/UsersGuide/hashgardNav','hashgardNav']
-                       ]
-                   },
-                   {
-                       title: 'Guide',
-                       children: [
-                         ['/en/learn/Guide/installation','installation'],
-                         ['/en/learn/Guide/AccountGuide','AccountGuide'],
-                         ['/en/learn/Guide/','testnet Guide'],
-                         ['/en/learn/Guide/Delegate','Delegate'],
-                         ['/en/learn/Guide/Deposit','Deposit'],
-                         ['/en/learn/Guide/genesis','genesis'],
-                         ['/en/learn/Guide/GreatValidator','GreatValidator'],
-                         ['/en/learn/Guide/Redelegate','Redelegate'],
-                         ['/en/learn/Guide/SubmitProposal','SubmitProposal'],
-                         ['/en/learn/Guide/unbond','unbond'],
-                          ['/en/learn/Guide/Vote','Vote']
-                       ]
-                   }
-                ],
                 '/en/test/':[
                   ['/en/test/','Start'],
                   ['/en/test/sif-1000/','sif-1000'],
                   ['/en/test/sif-2000/','sif-2000'],
                   ['/en/test/sif-3001/','sif-3001'],
 
-                ],
+                ]
                },
 
                sidebarDepth: 1, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。

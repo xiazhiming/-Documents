@@ -148,27 +148,3 @@ hashgardcli status
 
 
 
-## 后续步骤
-
-您现在拥有一个活动的完整节点。下一步是什么？
-
-### 步骤 5：升级到验证人( Validator )节点
-
-如果您参与了 genesis 文件生成过程，那么一旦完全同步，您的节点就会成为验证人中的一员。
-
-如果您错过了 genesis 文件生成过程，您仍然可以将您的节点升级成为 Hashgard 验证人节点，继续进入 [创建验证人节点](../learn/Guide/GreatValidator.md)。
-
-您也可以[委托](../learn/Guide/Delegate.md)，[解绑](../learn/Guide/unbond.md)，[再委托](../learn/Guide/Redelegate.md)
-
-
-
-### 步骤 6：链式治理
-
-去中心化的链式，您可以在链上发起提案，也可参与到投票过程中
-
-如何发起提案？进入[发起治理提案](../learn/Guide/SubmitProposal.md)
-
-提案时需要进入激活状态才能发起投票，在此之前，您可以进行[抵押存款](../learn/Guide/Deposit.md)
-
-对于被正式被激活的提案，您可以对其进行[投票](../learn/Guide/Vote.md)
-
