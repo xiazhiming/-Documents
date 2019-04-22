@@ -2,7 +2,9 @@
 
 该文档目的是介绍如何运行一个 Hashgard 节点并加入当前的测试网。
 
-> 当前为 sif-3001 测试网络，请务必指定 chain-id = sif-3001
+> 当前为 sif-4000 测试网络，请务必指定 chain-id = sif-4000
+>
+> 注意不同的测试任务涉及到id不同，请查看测试任务标题
 
 > \${}代表变量，需要你手动替换成你自己设定的值
 
@@ -33,7 +35,7 @@
 设置 hashgardcli 命令行客户端的默认连接节点：
 
 ```
-hashgardcli config chain-id sif-3001
+hashgardcli config chain-id sif-4000
 hashgardcli config trust-node true
 ```
 
@@ -51,7 +53,7 @@ hashgardcli config output json
 #### 4.1：初始化节点
 
 ```bash
-hashgard init --chain-id=sif-3001 --moniker=${your_node_name}
+hashgard init --chain-id=sif-4000 --moniker=${your_node_name}
 ```
 
 如果您想在 genisis 阶段成为验证人，您可以按照文档 [参与 genesis](../learn/Guide/genesis.md) 来生成一个 json 文件，并提交给我们。
@@ -144,7 +146,7 @@ hashgardcli status
 
 当您看到 `catching_up` 是 `false`，表示节点的区块数据与 testnet 已经同步完成，否则表示它仍在同步。
 
-您现在已经成功运行了一个 Hashgard 完整节点并接入了 sif-3001 测试网。
+
 
 
 
