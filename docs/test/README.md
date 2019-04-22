@@ -10,7 +10,7 @@
 
 ## 测试币领取方式
 
-请参考[测试币](dev/command/hashgard/Faucet.md) 进行测试币领取。
+请参考[测试币](/dev/command/hashgard/Faucet.md) 进行测试币领取。
 
 
 
@@ -18,13 +18,13 @@
 
 ### 步骤 1：在您的服务器上安装 Hashgard
 
-请参照 [hashgard 安装文档](../learn/Guide/installation.md) 安装 Hashgard。
+请参照 [hashgard 安装文档](/learn/Guide/installation.md) 安装 Hashgard。
 
 
 
 ### 步骤 2：创建钱包
 
-如果尚未创建钱包，请参照 [钱包创建文档](../dev/command/hashgardcli/keys/add.md) 创建钱包。
+如果尚未创建钱包，请参照 [钱包创建文档](/dev/command/hashgardcli/keys/add.md) 创建钱包。
 
 
 
@@ -54,7 +54,7 @@ hashgardcli config output json
 hashgard init --chain-id=sif-3001 --moniker=${your_node_name}
 ```
 
-如果您想在 genisis 阶段成为验证人，您可以按照文档 [参与 genesis](./laern/Guide/genesis.md) 来生成一个 json 文件，并提交给我们。
+如果您想在 genisis 阶段成为验证人，您可以按照文档 [参与 genesis](/laern/Guide/genesis.md) 来生成一个 json 文件，并提交给我们。
 或者，您可以随后再发送相关交易，同样可以升级为验证人节点。
 
 
