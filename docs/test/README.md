@@ -18,13 +18,13 @@
 
 ### 步骤 1：在您的服务器上安装 Hashgard
 
-请参照 [hashgard 安装文档](/learn/Guide/installation.md) 安装 Hashgard。
+请参照 [hashgard 安装文档](../learn/Guide/installation.md) 安装 Hashgard。
 
 
 
 ### 步骤 2：创建钱包
 
-如果尚未创建钱包，请参照 [钱包创建文档](/dev/command/hashgardcli/keys/add.md) 创建钱包。
+如果尚未创建钱包，请参照 [钱包创建文档](../dev/command/hashgardcli/keys/add.md) 创建钱包。
 
 
 
@@ -54,7 +54,7 @@ hashgardcli config output json
 hashgard init --chain-id=sif-3001 --moniker=${your_node_name}
 ```
 
-如果您想在 genisis 阶段成为验证人，您可以按照文档 [参与 genesis](genesis.md) 来生成一个 json 文件，并提交给我们。
+如果您想在 genisis 阶段成为验证人，您可以按照文档 [参与 genesis](../laern/Guide/genesis.md) 来生成一个 json 文件，并提交给我们。
 或者，您可以随后再发送相关交易，同样可以升级为验证人节点。
 
 
@@ -156,9 +156,9 @@ hashgardcli status
 
 如果您参与了 genesis 文件生成过程，那么一旦完全同步，您的节点就会成为验证人中的一员。
 
-如果您错过了 genesis 文件生成过程，您仍然可以将您的节点升级成为 Hashgard 验证人节点，继续进入 [创建验证人节点](/learn/Guide/GreatValidator.md)。
+如果您错过了 genesis 文件生成过程，您仍然可以将您的节点升级成为 Hashgard 验证人节点，继续进入 [创建验证人节点](../learn/Guide/GreatValidator.md)。
 
-您也可以[委托](/learn/Guide/Delegate.md)，[解绑](/learn/Guide/unbond.md)，[再委托](/learn/Guide/Redelegate.md)
+您也可以[委托](../learn/Guide/Delegate.md)，[解绑](../learn/Guide/unbond.md)，[再委托](../learn/Guide/Redelegate.md)
 
 
 
@@ -166,9 +166,9 @@ hashgardcli status
 
 去中心化的链式，您可以在链上发起提案，也可参与到投票过程中
 
-如何发起提案？进入[发起治理提案](/learn/Guide/SubmitProposal.md)
+如何发起提案？进入[发起治理提案](../learn/Guide/SubmitProposal.md)
 
-提案时需要进入激活状态才能发起投票，在此之前，您可以进行[抵押存款](/learn/Guide/Deposit..md)
+提案时需要进入激活状态才能发起投票，在此之前，您可以进行[抵押存款](../learn/Guide/Deposit..md)
 
-对于被正式被激活的提案，您可以对其进行[投票](/learn/Guide/Vote.md)
+对于被正式被激活的提案，您可以对其进行[投票](../learn/Guide/Vote.md)
 
