@@ -379,7 +379,7 @@ module.exports = {
                  ['/test/','起步'],
                  ['/test/sif-1000/','sif-1000'],
                  ['/test/sif-2000/','sif-2000'],
-                 ['/test/sif-3001/','sif-3001'],
+                 ['/test/sif-3001/','sif-3001']
                ],
                 '/learn/':[
                 {
@@ -394,7 +394,7 @@ module.exports = {
                        children: [
                           ['/learn/UsersGuide/WebWalletGuide','网页钱包使用指南'],
                           ['/learn/UsersGuide/hashgardExplorerGuide','浏览器使用指南'],
-                          ['/learn/UsersGuide/hashgardNav','hashgard导航'],
+                          ['/learn/UsersGuide/hashgardNav','hashgard导航'],
 
                        ],
                    },
