@@ -31,7 +31,7 @@ hashgardcli send [FutureBoxID] [issueID][amount] --from -o json
 ### 设定远期支付行为
 
 ```bash
-hashgardcli set [FutureBoxID][time][to_address][isuueID][amount][split-transfer-off] --from -o json
+hashgardcli set [FutureBoxID][time][to_address][isuueID][amount] --from -o json
 ```
 
 为设定好的远期支付盒子设定支付行为
