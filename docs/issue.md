@@ -2,15 +2,11 @@
 
 ### 简述
 
-适合于企业级的高级资产发行标准。
+适合于企业级的高级资产发行标准
 
 ### 摘要
 
-标准同质化Token，该协议提供标准的token创建、转移、以及适合金融企业的高级管理功能：例如增发、冻结/解冻账户、销毁代币等功能。可用配合多签账户一起使用。适合于单个机构和个人或者多个机构和个人进行对于资产管理。
-
-
-
-## 发行通证
+标准同质化Token，该协议提供标准的token创建、转移、以及适合金融企业的高级管理功能：例如增发、冻结/解冻账户、销毁代币、强制转移等功能。
 
 
 
@@ -22,15 +18,35 @@ hashgardcli issue create [name][symbol][total-supply][flags]
 
 
 
-### 基本释义
+### 释义
 
 #### name
 
 通证名称，例如"mytoken" 。支持格式utf-8、 长度为3～32字符之间、可重复、必填、不支持修改。
 
+> Message
+>
+> - error：name encoding only supports utf-8.    
+> - 报错：name 编码格式不正确。
+> - error：The length of the name is between 3 and 32. 
+> - 报错：name字符长度应该在3～32。
+> - error：The name cannot be empty.  
+> - 报错：name不能为空。
+
+
+
 #### symbol
 
 通证符号，例如"BTC"。仅支持数字和大写英文、长度2～8字符之间。可重复、不能为空，必填、不支持修改。
+
+> Message
+>
+> - error：symbol only supports 0-9 and A-Z.
+> - 报错：symbol 仅支持大写字母和数字。
+> - error：The length of the symbol is between 2and 8.
+> - 报错：symbol 字符长度为2～8。
+> - error：The symbol cannot be empty.
+> - 报错：symbol 不能为空。
 
 
 
@@ -38,9 +54,14 @@ hashgardcli issue create [name][symbol][total-supply][flags]
 
 通证发行总量，仅支持正整数。最大不超过2^64-1。必填、数量发行后受到burn和mint操作而发生改变。
 
+> Message
+>
+> - error：total-supply exceeds the upper limit.
+> - 报错：total-supply 发行总量超出上限。
+> - error：total-supply must be a positive integer.
+> - 报错：total-supply 必须为正整数。
 
 
-## 高级管理功能
 
 
 
@@ -48,14 +69,16 @@ hashgardcli issue create [name][symbol][total-supply][flags]
 
 | 名称               | 类型 | 是否必须 | 默认值 | 描述                                               |
 | ------------------ | ---- | :------: | ------ | -------------------------------------------------- |
-| --decimals         | int  |    否    | 18     | （可选）通证精度，默认18位，最大18位               |
+| --decimals         | int  |    否    | 18     | （可选）代币精度，默认18位，最大18位               |
 | --burn-Owen-off    | bool |    否    | false  | （可选）是否关闭Owen销毁自己通证                   |
 | -burn-handlers-off | bool |    否    | false  | （可选）是否关闭用户销毁自己通证                   |
 | --burn-from-off    | bool |    否    | false  | （可选）是否关闭Owner可销毁任意账号下该代币的功能  |
 | freezeAccount-off  | bool |    否    | false  | （可选）是否关闭Owen冻结解冻用户该通证转入转出功能 |
 | --minting-finished | bool |    否    | false  | （可选）是否关闭Owen增发权限                       |
 
-默认不设置为开启状态，操作不可逆，一旦设定或关闭将无法修改。以上flags控制改合约以下几个功能的使用。
+默认不设置为开启状态，操作不可逆，一旦设定或关闭将无法修改。
+
+
 
 ### burn
 
@@ -63,31 +86,119 @@ hashgardcli issue create [name][symbol][total-supply][flags]
 
 Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-handlers-off状态控制。
 
-[查看详情](../cli/hashgardcli/issue/burn.md)
+> Message
+>
+> - error：Burn is disabled.
+> - 报错：燃烧功能被禁用。
+> - error：The balance is less than the amount burned.
+> - 报错：余额小于燃烧数量。
+
+```bash
+ hashgardcli issue burn [issue-id] [amount] [flags]
+```
+
+
 
 ### burn-from
 
 该通证的Owen可以销毁其他正常用户持有该通证的可用余额。燃烧后通证总量减少。该命令受到--burn-from-off状态控制。
 
-[查看详情](../cli/hashgardcli/issue/burn-from.md)
+> Message
+>
+> - error：Owner mismatch with coin .
+> - 报错：与通证发行着不匹配。
+> - error：Burn-from  is disabled.
+> - 报错：燃烧用户余额功能被禁用。
+> - error：The balance is less than the amount burned.
+> - 报错：余额小于燃烧数量。
+> - error：burn-from address does not exist.
+> - 报错：燃烧地址不存在。
+
+```bash
+
+```
+
+
+
+
 
 ### freezeAccount
 
 可以冻结用户该通证转入、转出功能。并带有时间参数。time仅支持时间戳格式，开始时间不能晚余结束时间。开始时间早于交易执行时间。 该命令受到freezeAccount-off状态控制。
 
-[查看详情](../cli/hashgardcli/issue/freezeAccount.md)
+> Message
+>
+> - error：You are not the owen of the token.
+> - 报错：你不是该通证的Owen。
+> - error：freezeAccount is disabled.
+> - 报错：冻结账户功能被禁用。
+> - error：freezeAccount does not exist.
+> - 报错：冻结账户不存在。
+> - error：starting time.
+> - 报错：冻结开始时间不正确。
+> - error：end time.
+> - 报错：冻结结束时间不正确。
+> - error：Start time cannot be less than end time.
+> - 报错：冻结开始时间必须早于结束时间。
+
+```bash
+
+```
+
+
+
+
 
 ### unfreezeAccount
 
-解冻用户的账户转入、转出的状态。 该命令受到freezeAccount-off状态控制。
+解冻用户的账户转入、转出的状态。 
 
-[查看详情](../cli/hashgardcli/issue/freezeAccount.md)
+> Message
+>
+> error：You are not the owen of the token.
+>
+> 报错：你不是该通证的Owen。
+>
+> error：unfreezeAccount is disable.
+>
+> 报错：解冻功能被禁用。
+>
+> error：unfreezeAccount does not exist.
+>
+> 报错：解冻账户不存在
+>
+> Warning：account is not freeze.
+>
+> 警告：账户没有冻结状态
 
-### mint
+```bash
+
+```
+
+
+
+
+
+### minti
 
 Owen增发通证至自己账户。增发数量+现有发行数量不能超过2^64-1。增发数量仅支持正整数。该命令受到--minting-finished状态控制。
 
-[查看详情](../cli/hashgardcli/issue/mint.md)
+> Message
+>
+> - error：You are not the owen of the token.
+> - 报错：你不是该通证的Owen。
+> - error：minting  is disabled.
+> - 报错：增发功能被禁用。
+> - error：total-supply exceeds the upper limit.
+> - 报错：供应总量超出发行上限。
+> - error：mint quantity must be a positive integer.
+> - 报错：增发数量必须为正整数。
+
+```bash
+
+```
+
+
 
 ### 例子
 
@@ -130,7 +241,9 @@ hashgardcli issue create foocoin FOO 100000000 --from=foo -o=json
 }
 ```
 
-这样你就创建好了一个属于你的通证，接下来我们查询自己的资产情况。
+
+
+查询自己的账号
 
 ```bash
 hashgardcli bank account foo
@@ -165,8 +278,6 @@ hashgardcli bank account foo
 
 
 
-## 添加描述文件
-
 #### describe-file
 
 发行通证可用支持描述文件，格式支持json文件，大小不能超过1024字节。
@@ -187,10 +298,11 @@ hashgardcli bank account foo
 }
 ```
 
-[查看详情](../cli/hashgardcli/isuue/describe-file.md)
+> Message
+>
+> - error：file size cannot exceed 1024 byte.
+> - 报错：file文件大小不能大于1024byte。
+> - error：the file must be json。
+> - 报错：文件格式为json。
 
-##  配合多签功能使用
-
-在实际的金融活动中我们需要对该资产有多个管理员来进行管理，需要进行投票等复杂的，以及更高的安保要求，避免由于丢失密钥而无法对资产进行管理。我们支持用多签账户进行通证资产的发行。
-
-[查看详情](../cli/hashgardcli/bank/multisign.md)
+../cli/hashgardcli/bank/multisign.md)
