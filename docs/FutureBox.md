@@ -6,7 +6,7 @@
 
 ### 摘要
 
-
+远期支付是永续性盒子，发行者可以持续为盒子进行充值，设定远期支付行为，也可以取回自己放入的没有设定远期支付行为的余额。
 
 ### 示例
 
@@ -17,10 +17,10 @@ Alice 和Bobo进行金融交易，Bobo给Alice给出一部分现实中的资产�
 ### 远期支付盒子创建
 
 ```bash
-hashgardcli great futurebox [name][isuuerID][amount] --form -o json
+hashgardcli great futurebox [name] --form -o json
 ```
 
-
+为远期支付盒子创建名字和
 
 ### 对远期支付盒子进行进行充值
 
