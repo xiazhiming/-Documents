@@ -96,6 +96,10 @@ hashgardcli lock [FutureBoxID][time] --from -o json
 
 ####  balance
 
+- issue
+- amount
+- locked/unlocked
+
 远期支付盒子的余额。
 
 
@@ -144,7 +148,7 @@ hashgardcli futurebox sreach [name]
 >
 > - issueID
 > - amount
-> - lock-off
+> - locked/unlocked
 >
 > 支付信息list
 >
@@ -204,7 +208,7 @@ hashgardcli futurebox query [issue_adrress] [futuerboxID][to_address]
 >
 > - issueID
 > - amount
-> - lock-off
+> - locked/unlocked
 >
 > 支付信息list
 >
@@ -244,7 +248,7 @@ hashgardcli futurebox query [issue_adrress] [futuerboxID][to_address]
 >
 >- issueID
 >- amount
->- lock-off
+>- locked/unlocked
 >
 >支付信息
 >
