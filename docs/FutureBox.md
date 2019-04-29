@@ -17,7 +17,7 @@ Alice 和Bobo进行金融交易，Bobo给Alice给出一部分现实中的资产�
 ### 远期支付盒子创建
 
 ```bash
-hashgardcli great futurebox [name] --form -o json
+hashgardcli create futurebox [name] --form -o json
 ```
 
 为远期支付盒子创建名字

@@ -26,7 +26,7 @@ hashgarlcli depostibox create [name][issueID][start-time][end-time] --form -o js
 
 ### 对存款盒子进行充值
 
-```
+```bash
 hashgardcli depostibox send interest [depositboxid] [issueid][amount] --from -o json
 ```
 
@@ -48,7 +48,7 @@ hashgardcli depostibox set [depositboxid] [box-min-total][box-max-total][deposit
 
 存款盒子的唯一编码。
 
-
+#### create
 
 #### name
 
