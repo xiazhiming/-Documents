@@ -305,4 +305,3 @@ hashgardcli bank account foo
 > - error：the file must be json。
 > - 报错：文件格式为json。
 
-../cli/hashgardcli/bank/multisign.md)
