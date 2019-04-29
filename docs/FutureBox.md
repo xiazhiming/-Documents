@@ -17,44 +17,34 @@ Alice 和Bobo进行金融交易，Bobo给Alice给出一部分现实中的资产�
 ### 远期支付盒子创建
 
 ```bash
-hashgardcli create futurebox [name] --form -o json
+hashgardcli futurebox create [name] --form -o json
 ```
 
 为远期支付盒子创建名字
 
-### 对远期支付盒子进行进行充值
+#### create
 
-```
-hashgardcli send [FutureBoxID] [issueID][amount] --from -o json
-```
-
-### 设定远期支付行为
-
-```bash
-hashgardcli set [FutureBoxID][time][to_address][isuueID][amount] --from -o json
-```
-
-为设定好的远期支付盒子设定支付行为
-
-### 设定锁定行为
-
-```bash
-hashgardcli lock [FutureBoxID][time] --from -o json
-```
-
-为远期支付盒子进行锁定操作，锁定行为仅限于远期支付盒子中的余额。
-
-### 基本释义
-
-#### FutureBoxID
-
-远期支付盒子唯一编号
+创建
 
 #### name
 
 存款盒子的名称，例如"gardfound01"。支持格式4～24字符之间。可重复、必填、不可修改。
 
 > error：name  is between 4 and 24 in length.
+>
+> 
+
+### 对远期支付盒子进行进行充值
+
+```bash
+hashgardcli futurebox send [FutureBoxID] [issueID][amount] --from -o json
+```
+
+#### FutureBoxID
+
+远期支付盒子唯一编号
+
+
 
 #### issueID
 
@@ -62,23 +52,41 @@ hashgardcli lock [FutureBoxID][time] --from -o json
 
 > error：Issue does not exist.
 
+
+
 #### amount
 
 需要和issueID一起使用。
 
 对远期支付盒子只能发行者进行充值，不允许非远期支付盒子用户进行充值。
 
-#### to_address
 
-收款地址。
+
+### 设定远期支付行为
+
+```bash
+hashgardcli  futurebox set [FutureBoxID][time][to_address][isuueID][amount] --from -o json
+```
+
+为设定好的远期支付盒子设定支付行为
 
 #### time
 
 需要支付的时间。
 
+
+
+#### to_address
+
+收款地址。
+
+
+
 #### issueID
 
 需要支付的通证类型。
+
+
 
 #### amount
 
@@ -88,9 +96,25 @@ hashgardcli lock [FutureBoxID][time] --from -o json
 
 
 
+### 设定锁定行为
+
+```bash
+hashgardcli futurebox lock [FutureBoxID][time] --from -o json
+```
+
+为远期支付盒子进行锁定操作，锁定行为仅限于远期支付盒子中的余额。
+
+
+
 #### lock
 
 锁定行为与time连用，锁定时间内支付盒子内余额不能进行任何其他操作。可以在锁定期过后重新设置远期支付行为。
+
+
+
+#### time
+
+锁定结束的时间。
 
 
 
