@@ -20,7 +20,7 @@ Alice 和Bobo进行金融交易，Bobo给Alice给出一部分现实中的资产�
 hashgardcli great futurebox [name] --form -o json
 ```
 
-为远期支付盒子创建名字和
+为远期支付盒子创建名字
 
 ### 对远期支付盒子进行进行充值
 
@@ -31,10 +31,18 @@ hashgardcli send [FutureBoxID] [issueID][amount] --from -o json
 ### 设定远期支付行为
 
 ```bash
-hashgardcli set [FutureBoxID][to_address][isuueID][amount][split-transfer-off] --from -o json
+hashgardcli set [FutureBoxID][time][to_address][isuueID][amount][split-transfer-off] --from -o json
 ```
 
+为设定好的远期支付盒子设定支付行为
 
+### 设定锁定行为
+
+```bash
+hashgardcli lock [FutureBoxID][time] --from -o json
+```
+
+为远期支付盒子进行锁定操作，锁定行为仅限于远期支付盒子中的余额。
 
 ### 基本释义
 
@@ -77,6 +85,14 @@ hashgardcli set [FutureBoxID][to_address][isuueID][amount][split-transfer-off] -
 需要支付的通证的数量，需要和issueid连用，不能超过支付盒子的该通证的余额。
 
 远期支付行为一旦设定，无法被取消。支付行为会按照设定的状态进行变更。
+
+
+
+#### lock
+
+锁定行为与time连用，锁定时间内支付盒子内余额不能进行任何其他操作。可以在锁定期过后重新设置远期支付行为。
+
+
 
 ####  balance
 
@@ -125,6 +141,10 @@ hashgardcli futurebox sreach [name]
 > issueID
 >
 > balance 余额 
+>
+> - issueID
+> - amount
+> - lock-off
 >
 > 支付信息list
 >
@@ -182,6 +202,10 @@ hashgardcli futurebox query [issue_adrress] [futuerboxID][to_address]
 >
 > balance 余额 
 >
+> - issueID
+> - amount
+> - lock-off
+>
 > 支付信息list
 >
 > time
@@ -217,6 +241,10 @@ hashgardcli futurebox query [issue_adrress] [futuerboxID][to_address]
 >issueID
 >
 >balance 余额 
+>
+>- issueID
+>- amount
+>- lock-off
 >
 >支付信息
 >
