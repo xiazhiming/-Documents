@@ -1,8 +1,12 @@
-## HRC13 FutureBox 远期存款协议(草稿)
+## HRC13 FutureBox 远期支付协议(草稿)
 
 ### 简述
 
 在现实社会中约定的远期金融交易，具有公平公正，一旦约定，不受其他因素影响。
+
+### 摘要
+
+
 
 ### 示例
 
@@ -16,6 +20,8 @@ Alice 和Bobo进行金融交易，Bobo给Alice给出一部分现实中的资产�
 hashgardcli great futurebox [name][isuuerID][amount] --form -o json
 ```
 
+
+
 ### 对远期支付盒子进行进行充值
 
 ```
@@ -25,7 +31,7 @@ hashgardcli send [FutureBoxID] [issueID][amount] --from -o json
 ### 设定远期支付行为
 
 ```bash
-hashgardcli set [FutureBoxID][to_address][isuueID][amount] --from -o json
+hashgardcli set [FutureBoxID][to_address][isuueID][amount][split-transfer-off] --from -o json
 ```
 
 
@@ -223,3 +229,6 @@ hashgardcli futurebox query [issue_adrress] [futuerboxID][to_address]
 >amount
 >
 >retrieve-off 
+
+
+

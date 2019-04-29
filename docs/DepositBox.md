@@ -22,11 +22,15 @@ Hashgard提供原生的存款服务协议。帮助金融机构进行流通资产
 hashgarlcli depostibox create [name][issueID][start-time][end-time] --form -o json
 ```
 
+创建存款盒子包括名字，接受存款的通证类型，存款开始时间，结束时间。
+
 ### 对存款盒子进行充值
 
 ```
 hashgardcli depostibox send interest [depositboxid] [issueid][amount] --from -o json
 ```
+
+对指定存款盒子进行利息的存储
 
 ### 设定存款协议
 
@@ -34,7 +38,7 @@ hashgardcli depostibox send interest [depositboxid] [issueid][amount] --from -o 
 hashgardcli depostibox set [depositboxid] [box-min-total][box-max-total][deposit-min][deposit-max][split-transfer-off] --from -json
 ```
 
-
+设定该存款盒子的各项存款协议
 
 
 
