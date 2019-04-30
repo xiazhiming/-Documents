@@ -56,13 +56,19 @@ hashgardcli futurebox create [name][amount][transfer-on]--form -o json
 
 
 
+#### transfer-on
+
+设定收款账户是否可以将自己账户中的该凭证进行交易。
+
+
+
 ### 设定远期支付行为
 
 ```bash
 hashgardcli  futurebox set [FutureBoxID][time][to_address][isuueID][amount] --from -o json
 ```
 
-为设定好的远期支付盒子设定支付行为
+为设定好的远期支付盒子设定支付行为。
 
 
 
@@ -108,12 +114,12 @@ hashgardcli  futurebox set [FutureBoxID][time][to_address][isuueID][amount] --fr
    "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",//转账地址
     "amount":"10000", //转账数量
     "isseID":"coin9324829424"//转账通证类型
-  }，
+  },
     {
-   "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",
+    "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",
     "amount":"10000",
     "isseID":"coin9324829424"
-  }，
+  },
  {
     "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",
     "amount":"10000",
@@ -128,12 +134,12 @@ hashgardcli  futurebox set [FutureBoxID][time][to_address][isuueID][amount] --fr
    "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",
     "amount":"10000",
     "isseID":"coin9324829424"
-  }，
+  },
     {
    "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",
     "amount":"10000",
     "isseID":"coin9324829424"
-  }，
+  },
  {
     "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",
     "amount":"10000",
@@ -189,69 +195,69 @@ hashgardcli futurebox lock [FutureBoxID][time] --from
 
 #### retrieve
 
-- 盒子发行者对未分配支付行为的剩余通证余额进行取回动作。
-
-- 在发行方设定的支付时间后，收款账户可以取回支付盒子发行方支付的通证。
-
 ```bash
 hashgardcli futurebox retrieve[futureboxID][aomount] --from 
 ```
 
+- 盒子发行者对未分配支付行为的剩余通证余额进行取回动作。
 
 
 
+## 支付盒子查询总数据
 
- ## 搜索
+
+
+> 支付盒子信息总览
+>
+> name 支付盒子名称
+>
+> Issue-address 发行者地址
+>
+> time  发行时间
+>
+> balance 余额 
+>
+> - issueID   余额种类
+> - amount  余额数量
+> - locked/unlocked 余额锁定状态
+>
+> transfer/untransfer 交易转移状态
+
+
+
+>
+>
+>支付信息
+>
+>time  时间
+>
+>- FutureBoxID-sequence  支付盒子ID-期数
+>
+>- issueID+amount  该时间需要支付的通证总数
+>- paid/unpaid  支付状态
+
+
+
+> address 支付地址
+>
+> - FutureBoxID-sequence  支付盒子ID-期数
+> - amount 支付数量
+
+
+
+### 搜索
 
 ```
 hashgardcli futurebox sreach [name]
 ```
 
-
-
-### 发行信息
-
 ##### name
 
 按照支付盒子的名字进行搜索
 
-> 支付盒子list
->
-> name
->
-> Issue-address
->
-> time
->
-> height
->
-> issueID
->
-> balance 余额 
->
-> - issueID
-> - amount
-> - locked/unlocked
->
-> transfer/untransfer 交易转移状态
->
-> 支付信息list
->
-> - time
-> - issueID+amount
-> - paid/unpaid
->
-> address
->
-> - FutureBoxID-sequence
-> - amount
-> - paid/unpaid
 
 
-
-## 查询
-
-
+### 查询
 
 ```
 hashgardcli futurebox query [issue_adrress] [futuerboxID][to_address]
@@ -263,89 +269,24 @@ hashgardcli futurebox query [issue_adrress] [futuerboxID][to_address]
 
 #### issue_adrress
 
-按照支付盒子发行者地址进行查询
-
-**查询结果同name结构**
+按照支付盒子发行者地址进行查询，
 
 
 
 #### futuerboxID
 
-按支付盒子唯一编码进行查询
+按照支付盒子的唯一编码进行查询，
 
-> 支付盒子
->
-> tx
->
-> date
->
-> name
->
-> Issue-address
->
-> time
->
-> height
->
-> issueID
->
-> balance 余额 
->
-> - issueID
-> - amount
-> - locked/unlocked
->
-> 支付信息list
->
-> time
->
-> address
->
-> issueid
->
-> amount
->
-> retrieve-off 
+
+
+#### FutureBoxID-sequence
+
+按照支付盒子唯一编码+期数查询，
 
 
 
 #### futuerboxID to_address
 
-按照指定支付盒子查询支付地址
-
->支付盒子
->
->tx
->
->date
->
->name
->
->Issue-address
->
->time
->
->height
->
->issueID
->
->balance 余额 
->
->- issueID
->- amount
->- locked/unlocked
->
->支付信息
->
->time
->
->address
->
->issueid
->
->amount
->
->retrieve-off 
-
+按照指定支付盒子编码查询支付地址信息。
 
 
