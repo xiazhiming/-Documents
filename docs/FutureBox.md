@@ -42,6 +42,8 @@ hashgardcli futurebox send [FutureBoxID] [issueID][amount] --from -o json
 
 #### FutureBoxID
 
+
+
 远期支付盒子唯一编号
 
 
@@ -137,7 +139,8 @@ hashgardcli futurebox lock [FutureBoxID][time] --from -o json
 - 在发行方设定的支付时间后，收款账户可以取回支付盒子发行方支付的通证。
 
 ```bash
-hashgardcli futurebox retrieve[futureboxID][issueID][aomount] --from 
+hashgardcli futurebox retrieve[futureboxID][issueID][aomount
+] --from 
 ```
 
 

@@ -179,7 +179,7 @@ Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-handlers-off状
 
 
 
-### minti
+### mint
 
 Owen增发通证至自己账户。增发数量+现有发行数量不能超过2^64-1。增发数量仅支持正整数。该命令受到--minting-finished状态控制。
 
