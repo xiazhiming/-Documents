@@ -158,11 +158,11 @@ hashgardcli despositbox redeem [to_address][amount] --from
 
 
 
-## 搜索结果
+## 存款盒子查询总数据
 
-### 总数据结构
 
->**发行信息**
+
+>**发行信息总览**
 >
 >name 存款盒子名称
 >
@@ -217,7 +217,7 @@ hashgardcli despositbox redeem [to_address][amount] --from
 
 
 
-## 搜索
+### 搜索
 
 ```bash
 hashgard despositbox sreach [name]
@@ -229,7 +229,7 @@ hashgard despositbox sreach [name]
 
 根据存款盒子进行查询name字段，返回发行信息list。
 
-## 查询
+### 查询
 
 ```bash
 hashgardcli desposit query[despositboxId][list][issue_adress] 
