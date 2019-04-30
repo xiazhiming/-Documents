@@ -57,14 +57,14 @@ hashgardcli futurebox create [name][amount][transfer-on] --form
 ### 设定远期支付行为
 
 ```bash
-hashgardcli  futurebox set [FutureBoxID][time][to_address][isuueID][amount] --from -o json
+hashgardcli  futurebox set [FutureBoxID][payment] --from -o json
 ```
 
 为设定好的远期支付盒子设定支付行为。
 
 
 
-#### pay-file
+#### payment-file
 
 发行存款盒子支持描述文件，格式支持json文件，大小不能超过102400字节。
 
@@ -141,13 +141,6 @@ hashgardcli  futurebox set [FutureBoxID][time][to_address][isuueID][amount] --fr
 },
 
 ```
-
-> Message
->
-> - error：$name token less the 
-> - error：$to_address does not exist.
-
-
 
 
 
