@@ -34,14 +34,17 @@ Hashgard提供原生的存款服务协议。帮助金融机构进行流通资产
 
 
 
-### gas费用计算
+### gas费用
 
 - 发行数据gas
-- 盒子份数*单笔交易gas 用于自动回退用户
+
+-  成立失败或存款结束用于自动回退用户gas
+
+- 存款成立时为每个用户将存款兑换盒子的gas
+
+  
 
 ## 存款盒子发行
-
-
 
 ### 1.发行存款盒子 depostibox
 
@@ -74,7 +77,7 @@ hashgarlcli depostibox create [name][issueID][start-time][maturity] [flags] --fr
 | --Bottom line |      |      |      | （选填）整个存款协议发放利息所设定的最低总存款条件条件限定。不设置默认为0。设定范围在0～ceiling之间。 |
 | --ceiling     |      |      |      | （必填）整个存款盒子最多容纳的存款数量。                     |
 | --price       |      |      |      | （必填）每份所需所需要的存款。                               |
-| — transfer-on |      |      |      | 用户存款后的存款凭证是否可以进行交易                         |
+| — transfer-on |      |      |      | （选填）用户存款后的存款凭证是否可以进行交易                 |
 
 整个存款盒子分为若干个份，price为每份的价格。存款必须为price的整数倍。获得凭证即为份数。如果发行者设定了可进行交易。那么交易数量必须为正整数。
 
@@ -85,23 +88,20 @@ hashgarlcli depostibox create [name][issueID][start-time][maturity] [flags] --fr
 ### 2.对存款盒子进行利息注入
 
 ```bash
-hashgardcli depostibox send interest [depositboxid] [issueid][amount] --from 
+hashgardcli depostibox send [depositboxid][amount] --from 
 ```
+
+对指定存款盒子进行利息的充值。充值人可以不是盒子发行者。充值的的总额不能大于已经设定的利息总额。存款盒子参数和利息设置完成即可进入存款募集期。
 
 #### depositboxid
 
 存款盒子的唯一编码。
 
-#### interest
-
-|   名称   |      |      |      |                 解释                 |
-| :------: | ---- | ---- | ---- | :----------------------------------: |
-| -IssueId |      |      |      | 做为利息的通证种类，可与存款通证不同 |
-| -amount  |      |      |      |                                      |
+#### amount
 
 利息由利息的通证种类和数量组成，利息可与吸纳的存款通证种类不一致。仅支持一种。
 
-对指定存款盒子进行利息的充值。充值人可以不是盒子发行者。充值的的总额不能大于已经设定的利息总额。存款盒子参数和利息设置完成即可进入存款募集期。
+
 
 
 
@@ -109,7 +109,7 @@ hashgardcli depostibox send interest [depositboxid] [issueid][amount] --from
 
 #### describe-file
 
-发行存款盒子支持描述文件，格式支持json文件，大小不能超过1024字节。
+发行存款盒子支持描述文件，格式支持json文件，大小不能超过1024字节。可选字段
 
 - organization 组织机构或个人名称 。
 - Logo  通证项目图标或项目图标，仅支持网址链接。
@@ -160,19 +160,11 @@ hashgardcli despositbox redeem [to_address][amount] --from
 
 
 
+## 搜索结果
 
+### 总数据结构
 
-
-
-## 搜索
-
-```bash
-hashgardcli despositbox sreach [name]
-```
-
-
-
->发行信息list
+>**发行信息list**
 >
 >name 存款盒子名称
 >
@@ -181,8 +173,6 @@ hashgardcli despositbox sreach [name]
 >- logo
 >- organization 组织机构或个人
 >- description   盒子描述
->
->
 >
 >Issuer-address 发行者地址
 >
@@ -198,8 +188,6 @@ hashgardcli despositbox sreach [name]
 >
 >ceiling 存款上限
 >
->
->
 >Interest 利息
 >
 >- issueID 利息种类
@@ -208,23 +196,26 @@ hashgardcli despositbox sreach [name]
 >  - amount 注入利息数量
 >
 >transfer/untransfer 交易转移状态
+
+
+
+>  存款信息
 >
+> Total deposit 总存款
 >
+> coupon 每份需要付出的利息数
 >
->存款信息
+> Share  总共出售的份数
+
+
+
+> 用户存款信息
 >
->Total deposit 总存款
+> address 用户地址
 >
->coupon 每份需要付出的利息数
+> amount 用户存款数量(存款吸纳期)/amount用户持有share的份数（存期）
 >
->Share  总共出售的份数
->
->
->
->address 用户地址
->
->- amount 用户存款数量(存款吸纳期)
->- amount用户持有share的份数（存期）
+> Redeemed/Unredeemed 用户存款本金和利息赎回状态
 
 
 
