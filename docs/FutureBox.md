@@ -17,7 +17,7 @@ Alice 和Bobo进行金融交易，Bobo给Alice给出一部分现实中的资产�
 ### 远期支付盒子创建并充值
 
 ```bash
-hashgardcli futurebox create [name][amount][transfer-on]--form -o json
+hashgardcli futurebox create [name][amount][transfer-on] --form 
 ```
 
 为远期支付盒子创建名字
@@ -37,14 +37,6 @@ hashgardcli futurebox create [name][amount][transfer-on]--form -o json
 #### FutureBoxID
 
 远期支付盒子唯一编号
-
-
-
-#### issueID
-
-支付盒子存放通证的类型，可支持多种通证存入。
-
-> error：Issue does not exist.
 
 
 
