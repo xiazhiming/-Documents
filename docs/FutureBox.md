@@ -14,10 +14,10 @@ Alice 和Bobo进行金融交易，Bobo给Alice给出一部分现实中的资产�
 
 
 
-### 远期支付盒子创建
+### 远期支付盒子创建并充值
 
 ```bash
-hashgardcli futurebox create [name] --form -o json
+hashgardcli futurebox create [name][amount][transfer-on]--form -o json
 ```
 
 为远期支付盒子创建名字
@@ -31,18 +31,10 @@ hashgardcli futurebox create [name] --form -o json
 存款盒子的名称，例如"gardfound01"。支持格式4～24字符之间。可重复、必填、不可修改。
 
 > error：name  is between 4 and 24 in length.
->
-> 
 
-### 对远期支付盒子进行进行充值
 
-```bash
-hashgardcli futurebox send [FutureBoxID] [issueID][amount] --from -o json
-```
 
 #### FutureBoxID
-
-
 
 远期支付盒子唯一编号
 
@@ -72,6 +64,14 @@ hashgardcli  futurebox set [FutureBoxID][time][to_address][isuueID][amount] --fr
 
 为设定好的远期支付盒子设定支付行为
 
+
+
+#### pay-file
+
+发行存款盒子支持描述文件，格式支持json文件，大小不能超过102400字节。
+
+
+
 #### time
 
 需要支付的时间。
@@ -98,10 +98,65 @@ hashgardcli  futurebox set [FutureBoxID][time][to_address][isuueID][amount] --fr
 
 
 
+#### 模版
+
+```json
+{
+  "time":"1556606127", //批次时间
+  "tags":[
+  {
+   "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",//转账地址
+    "amount":"10000", //转账数量
+    "isseID":"coin9324829424"//转账通证类型
+  }，
+    {
+   "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",
+    "amount":"10000",
+    "isseID":"coin9324829424"
+  }，
+ {
+    "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",
+    "amount":"10000",
+    "isseID":"coin9324829424"
+  }，
+  ]
+},
+{
+  "time":"1556646127",
+  "tags":[
+  {
+   "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",
+    "amount":"10000",
+    "isseID":"coin9324829424"
+  }，
+    {
+   "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",
+    "amount":"10000",
+    "isseID":"coin9324829424"
+  }，
+ {
+    "to_address":"gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf",
+    "amount":"10000",
+    "isseID":"coin9324829424"
+  }，
+  ]
+},
+
+```
+
+> Message
+>
+> - error：$name token less the 
+> - error：$to_address does not exist.
+
+
+
+
+
 ### 设定锁定行为
 
 ```bash
-hashgardcli futurebox lock [FutureBoxID][time] --from -o json
+hashgardcli futurebox lock [FutureBoxID][time] --from 
 ```
 
 为远期支付盒子进行锁定操作，锁定行为仅限于远期支付盒子中的余额。
@@ -139,8 +194,7 @@ hashgardcli futurebox lock [FutureBoxID][time] --from -o json
 - 在发行方设定的支付时间后，收款账户可以取回支付盒子发行方支付的通证。
 
 ```bash
-hashgardcli futurebox retrieve[futureboxID][issueID][aomount
-] --from 
+hashgardcli futurebox retrieve[futureboxID][aomount] --from 
 ```
 
 
@@ -163,10 +217,6 @@ hashgardcli futurebox sreach [name]
 
 > 支付盒子list
 >
-> tx
->
-> date
->
 > name
 >
 > Issue-address
@@ -183,17 +233,19 @@ hashgardcli futurebox sreach [name]
 > - amount
 > - locked/unlocked
 >
+> transfer/untransfer 交易转移状态
+>
 > 支付信息list
 >
-> time
+> - time
+> - issueID+amount
+> - paid/unpaid
 >
 > address
 >
-> issueid
->
-> amount
->
-> retrieve-off 
+> - FutureBoxID-sequence
+> - amount
+> - paid/unpaid
 
 
 

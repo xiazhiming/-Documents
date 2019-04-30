@@ -72,12 +72,12 @@ hashgarlcli depostibox create [name][issueID][start-time][maturity] [flags] --fr
 
 ### flags
 
-| 名称          | 类型 |      |      | 解释                                                         |
-| ------------- | :--: | ---- | ---- | :----------------------------------------------------------- |
-| --Bottom line |      |      |      | （选填）整个存款协议发放利息所设定的最低总存款条件条件限定。不设置默认为0。设定范围在0～ceiling之间。 |
-| --ceiling     |      |      |      | （必填）整个存款盒子最多容纳的存款数量。                     |
-| --price       |      |      |      | （必填）每份所需所需要的存款。                               |
-| — transfer-on |      |      |      | （选填）用户存款后的存款凭证是否可以进行交易                 |
+| 名称           | 类型 |      |      | 解释                                                         |
+| -------------- | :--: | ---- | ---- | :----------------------------------------------------------- |
+| --Bottom line  |      |      |      | （选填）整个存款协议发放利息所设定的最低总存款条件条件限定。不设置默认为0。设定范围在0～ceiling之间。 |
+| --ceiling      |      |      |      | （必填）整个存款盒子最多容纳的存款数量。                     |
+| --price        |      |      |      | （必填）每份所需所需要的存款。                               |
+| -- transfer-on |      |      |      | （选填）用户存款后的存款凭证是否可以进行交易                 |
 
 整个存款盒子分为若干个份，price为每份的价格。存款必须为price的整数倍。获得凭证即为份数。如果发行者设定了可进行交易。那么交易数量必须为正整数。
 
@@ -88,7 +88,7 @@ hashgarlcli depostibox create [name][issueID][start-time][maturity] [flags] --fr
 ### 2.对存款盒子进行利息注入
 
 ```bash
-hashgardcli depostibox send [depositboxid][amount] --from 
+hashgardcli depostitbox send [depositboxid][amount] --from 
 ```
 
 对指定存款盒子进行利息的充值。充值人可以不是盒子发行者。充值的的总额不能大于已经设定的利息总额。存款盒子参数和利息设置完成即可进入存款募集期。
@@ -162,7 +162,7 @@ hashgardcli despositbox redeem [to_address][amount] --from
 
 ### 总数据结构
 
->**发行信息list**
+>**发行信息**
 >
 >name 存款盒子名称
 >
@@ -217,9 +217,17 @@ hashgardcli despositbox redeem [to_address][amount] --from
 
 
 
+## 搜索
+
+```bash
+hashgard despositbox sreach [name]
+```
+
+
+
 ##### name
 
-根据存款盒子进行查询 
+根据存款盒子进行查询name字段，返回发行信息list。
 
 ## 查询
 
@@ -231,31 +239,31 @@ hashgardcli desposit query[despositboxId][list][issue_adress]
 
 #### list
 
-查询所有的存款盒子
+返回所有存款盒子发行信息list。
 
 
 
 #### list issueId
 
-查询接受存款种类的ID进行查询
+查询接受存款种类的ID进行查询，返回存款分类发行信息list。
 
 
 
 #### Issuer-address
 
-按用发行存款盒子的地址进行查询。
+按用发行存款盒子的地址进行查询。返回发行信息list。
 
 
 
 #### despositBoxID
 
-按存款盒子唯一编码进行查询。
+按存款盒子唯一编码进行查询。返回发行信息list+存款信息+用户存款信息list。
 
 
 
 #### despositBoxID address
 
-按照存款盒子唯一编码和存款地址联合查询
+按照存款盒子唯一编码和存款地址联合查询，返回指定用户存款信息。
 
 
 
