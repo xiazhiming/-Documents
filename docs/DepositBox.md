@@ -103,8 +103,6 @@ hashgardcli depostibox send [depositboxid][amount] --from
 
 
 
-
-
 ### 3.添加备注
 
 #### describe-file
@@ -120,10 +118,10 @@ hashgardcli depostibox send [depositboxid][amount] --from
 
 ```json
 {
-    "organization":"Hashgard",
-    "website":"https://www.hashgard.com",
-    "logo":"https://cdn.hashgard.com/static/logo.2d949f3d.png",
-    "description":"新一代金融公有链" 
+  "organization":"Hashgard存款一期",
+  "website":"https://www.hashgard.com",
+  "logo":"https://cdn.hashgard.com/static/logo.2d949f3d.png",
+   "description":"存入Gard通证2个月即可用获得7%的apple收益" 
 }
 ```
 
@@ -235,23 +233,17 @@ hashgardcli desposit query[despositboxId][list][issue_adress]
 
 查询所有的存款盒子
 
-**查询结果同name结构**
-
 
 
 #### list issueId
 
 查询接受存款种类的ID进行查询
 
-**查询结果同name结构**
-
 
 
 #### Issuer-address
 
 按用发行存款盒子的地址进行查询。
-
-**查询结果同name结构**
 
 
 
