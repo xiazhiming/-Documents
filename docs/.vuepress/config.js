@@ -1,10 +1,11 @@
 module.exports = {
+
     base : '/',
     markdown: {
        lineNumbers: false // 代码块显示行号
    },
    locales: {
-         
+
            '/': {
                title:"Hashgard Documentation",
                lang:'zh-CN',
@@ -21,7 +22,7 @@ module.exports = {
     // 默认为 "Edit this page"
     editLinkText: '帮助我们改善此页面！',
       locales: {
-  
+
         '/': {
           // 多语言下拉菜单的标题
           selectText: '选择语言',
@@ -36,12 +37,12 @@ module.exports = {
               buttonText: "刷新"
             }
           },
-  
+
               sidebar:{
                '/':[
                   ['/issue.md','同质化通证发行协议'],
                    ['/DepositBox.md','存款协议'],
-                    ['/FutureBox.md','远期支付协议'],
+                   ['/FutureBox.md','远期支付协议'],
                 ],
                },
                sidebarDepth: 1, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
