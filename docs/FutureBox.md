@@ -151,15 +151,17 @@ hashgardcli  futurebox set [FutureBoxID][payment-file] --from
 
 
 
- ## 取回
+## 赎回
 
-#### retrieve
+#### redeem
 
 ```bash
 hashgardcli futurebox retrieve[futureboxID][aomount] --from 
 ```
 
-- 盒子发行者在未进行支付信息设置时候可以取回全部或者部分支付盒子中的通证。
+盒子发行者在未进行支付信息设置时候可以取回全部或者部分支付盒子中的通证。
+
+
 
 
 

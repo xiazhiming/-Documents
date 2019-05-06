@@ -14,11 +14,11 @@ Hashgard提供原生的存款服务协议。帮助金融机构进行流通资产
 
 ## 存款盒子的三个时期
 
+![depositbox](imges/depositbox.png)
 
 
 
 
-![flow](imges/flow.png)
 
 ### 1.存款盒子发行期
 
