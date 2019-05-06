@@ -194,7 +194,7 @@ hashgardcli despositbox redeem [despositboxID][amount]  --from
 >
 >- logo
 >- org 组织机构或个人
->- description   盒子描述
+>- intro   盒子描述
 >- Website 网站地址
 >
 >Issuer-address 发行者地址

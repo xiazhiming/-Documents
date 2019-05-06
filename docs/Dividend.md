@@ -121,7 +121,7 @@ hashgardcli dividendbox set [dividendboxID] [dividend-file] --from
 
 指定时间分红
 
-- time 时间次数 必填
+- time 多次分红时间 必填
 - holdings 持有量 选填
 - equal 均分 选填
 - address 限定地址 选填
@@ -140,6 +140,43 @@ hashgardcli dividendbox set [dividendboxID] [dividend-file] --from
 
 
 
+### 3.添加描述文件
+
+```bash
+hashgardcli dividendbox description [description-file] --from
+```
+
+
+
+#### description 
+
+发行存款盒子支持描述文件，格式支持json文件，大小不能超过1024字节。可选字段
+
+- org 组织机构或个人名称 。
+- Logo  通证项目图标或项目图标，仅支持网址链接。
+- website  发行方官方的网站地址。
+- intro  对于该项目的简单描述。
+
+#### 模版
+
+```json
+{
+  "org":"Hashgard主网上线一周年",
+  "website":"https://www.hashgard.com",
+  "logo":"https://cdn.hashgard.com/static/logo.2d949f3d.png",
+   "intro":"为所有持有gard的用户每人分红500apple" 
+}
+```
+
+> Message
+>
+> - error：file size cannot exceed 1024 byte.
+> - 报错：file文件大小不能大于1024byte。
+> - error：the file must be json。
+> - 报错：文件格式为json。
+
+
+
 ## 赎回
 
 #### redeem
@@ -149,3 +186,105 @@ hashgardcli dividendbox redeem [dividendboxID][amount] --from
 ```
 
 用户可以在存款吸纳期对于已经存入的存款自由的进行取回。
+
+
+
+## 分红盒子查询总数据
+
+
+
+> **发行信息总览**
+>
+> name 分红盒子名称
+>
+> description 盒子描述
+>
+> - logo
+> - org  组织机构或个人
+> - intro  介绍
+> - Website 网站地址
+>
+> Issuer-address 发行者地址
+>
+> issuerId 存款通证类型
+>
+> start-time 存款吸纳开始时间
+>
+> Established 存款项目达成时间
+>
+> maturity本金与利息交割时间
+>
+> price 每份的价格
+>
+> Bottom line 存款达成底线
+>
+> ceiling 存款上限
+>
+> Interest 利息
+>
+> - address  注入利息的地址
+> - amount 利息的数量
+> - issueID 利息种类
+>
+> Disable 功能开关
+>
+> - transfer交易转移状态
+>   - ture/false
+
+
+
+> 存款信息
+>
+> Total deposit 总存款
+>
+> coupon 每份需要付出的利息数
+>
+> Share  总共出售的份数
+
+
+
+> 用户存款信息
+>
+> address 用户地址
+>
+> amount  用户存款数量(存款吸纳期)
+>
+> - Issue
+>
+> amount 用户持有share的份数（存期）
+>
+> - depositboxID
+>
+> Redeemed/Unredeemed 用户存款本金和利息赎回状态
+
+
+
+> transaction 交易
+>
+> - call-transaction 认购交易
+> - from_address
+> - amount
+> - time
+>
+> 
+>
+> - redemption-transaction赎回交易
+> - to_address
+> - amount
+> - time
+>
+> 
+>
+> - deposit-transaction 盒子交易
+> - to_address
+> - from_address
+> - amount
+> - time
+>
+> 
+>
+> - system-transaction  系统交易
+> - to_address
+> - amount
+> - time
+

@@ -70,7 +70,7 @@ hashgardcli issue create [name][symbol][total-supply][flags]
 | 名称               | 类型 | 是否必须 | 默认值 | 描述                                               |
 | ------------------ | ---- | :------: | ------ | -------------------------------------------------- |
 | --decimals         | int  |    否    | 18     | （可选）代币精度，默认18位，最大18位               |
-| --burn-Owen-off    | bool |    否    | false  | （可选）是否关闭Owen销毁自己通证                   |
+| --burn-Owenr-off   | bool |    否    | false  | （可选）是否关闭Owenr销毁自己通证                  |
 | -burn-handlers-off | bool |    否    | false  | （可选）是否关闭用户销毁自己通证                   |
 | --burn-from-off    | bool |    否    | false  | （可选）是否关闭Owner可销毁任意账号下该代币的功能  |
 | freezeAccount-off  | bool |    否    | false  | （可选）是否关闭Owen冻结解冻用户该通证转入转出功能 |
@@ -304,4 +304,35 @@ hashgardcli bank account foo
 > - 报错：file文件大小不能大于1024byte。
 > - error：the file must be json。
 > - 报错：文件格式为json。
+
+
+
+## 发行查询总数据
+
+
+
+> name 支付盒子名称
+>
+> Issue-address 发行者地址
+>
+> symbol 令牌符号
+>
+> owenr 发行合约所有者地址
+>
+> decimals 小数位精度
+>
+> 
+>
+> total-supply 发行总量
+>
+> time  发行时间
+>
+> description 存款盒子描述
+>
+> - logo
+> - org 组织机构或个人
+> - intro   盒子描述
+> - Website 网站地址
+>
+> 
 

@@ -100,19 +100,13 @@ hashgardcli  futurebox set [FutureBoxID][payment-file] --from
 
 ```json
 {
-  "time":{
-          ["1":"1556989948"],
-          ["2":"1556289948"]
-         },
-  "tags": {
-    "coins":["1":"coin989809809"],
-    "send":{
-           ["gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf";"188";"200";],
-           ["gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf";"188";"200";],
-           ["gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf";"188";"200";],
-           ["gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf";"188";"200";]
+   "time":["1557127578","1557127578","1557127578","1557127578"],
+    "send":[
+     ["gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf","188","200"],
+     ["gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf","188","200"],
+     ["gardvaloper1k67xljpc0lr678wyl6vld9hy3t2lc6ph2fecaf","188","200"]
+    ]
     }
-  } 
 }
 ```
 
@@ -176,6 +170,13 @@ hashgardcli futurebox retrieve[futureboxID][aomount] --from
 > Issue-address 发行者地址
 >
 > time  发行时间
+>
+> description 存款盒子描述
+>
+> - logo
+> - org 组织机构或个人
+> - intro   盒子描述
+> - Website 网站地址
 >
 > amount  通证数量
 >
