@@ -142,10 +142,10 @@ hashgardcli despositbox description [description-file] --from
 
 ```json
 {
-  "org":"Hashgard天使轮释放",
+  "org":"Hashgard存款一期",
   "website":"https://www.hashgard.com",
   "logo":"https://cdn.hashgard.com/static/logo.2d949f3d.png",
-   "intro":"天使轮通证释放" 
+   "intro":"存入Gard通证2个月即可用获得7%的apple收益" 
 }
 ```
 

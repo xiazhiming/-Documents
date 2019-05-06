@@ -88,7 +88,7 @@ hashgardcli  futurebox set [FutureBoxID][payment-file] --from
 
 #### payment-file
 
-发行存款盒子支持描述文件，格式为json文件，大小不能超过1024字节。
+发行存款盒子支持描述文件，格式为json文件，大小不能超过102400字节。
 
 - time    需要兑现的时间。
 - to_address. 收款地址。
@@ -131,10 +131,10 @@ hashgardcli  futurebox set [FutureBoxID][payment-file] --from
 
 ```json
 {
-  "org":"Hashgard存款一期",
+  "org":"Hashgard天使轮释放",
   "website":"https://www.hashgard.com",
   "logo":"https://cdn.hashgard.com/static/logo.2d949f3d.png",
-   "intro":"存入Gard通证2个月即可用获得7%的apple收益" 
+   "intro":"天使轮通证释放" 
 }
 ```
 
