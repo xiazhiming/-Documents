@@ -175,7 +175,7 @@ hashgardcli despositbox description [description-file] --from
 #### redeem
 
 ```bash
-hashgardcli despositbox redeem [amount] [despositboxID] --from 
+hashgardcli despositbox redeem [despositboxID][amount]  --from 
 ```
 
 用户可以在存款吸纳期对于已经存入的存款自由的进行取回。
