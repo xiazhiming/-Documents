@@ -43,6 +43,7 @@ module.exports = {
                   ['/issue.md','同质化通证发行协议'],
                    ['/DepositBox.md','存款协议'],
                    ['/FutureBox.md','远期支付协议'],
+                   ['Recording/.md','存证'],
                 ],
                },
                sidebarDepth: 1, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
