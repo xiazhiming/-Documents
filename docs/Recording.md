@@ -2,7 +2,7 @@
 
 #### 简述
 
-整个金融行业
+整个金融行业，对于合同
 
 #### 摘要
 
@@ -50,11 +50,7 @@
 
 需要进行取证的合法机构
 
-
-
-![recording](imges/recording.png)
-
-
+<a data-fancybox  href="imges/recording.png">![imges/recording.png](imges/recording.png)</a>
 
 ### 存证
 

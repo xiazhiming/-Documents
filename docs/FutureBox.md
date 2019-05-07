@@ -12,9 +12,9 @@
 
 Alice 和Bobo进行金融交易，Bobo给Alice给出一部分现实中的资产，Alice承诺在未来的一年内给予Bobo证券资产1000god，每个季度末尾付出250god。那么Alice创建了一个futurebox，并起名为Alice与Bobo资产互换一期，对futurebox存入1000个god 并设定当年每3月28、6月31日、9月30日、12月30各付出250god给Bobo。远期支付协议的优势，事先存入，一旦约定，将按预定的条件进行执行。不担心任何中途的其他人为意愿或者经济形势的变化而发生改变。充分的使用了区块链技术中不可逆的价值属性。
 
+<a data-fancybox  href="imges/futurebox.png">![imges/futurebox.png](imges/futurebox.png)</a>
 
 
-![futurebox](imges/futurebox.png)
 
 ### 远期支付盒子分为两个时期
 
