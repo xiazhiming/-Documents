@@ -84,7 +84,7 @@ hashgardcli issue create [name][symbol][total-supply][flags]
 
 持有该通证的所有用户或者Owen可以燃烧自己的可用余额。燃烧后通证总量减少。
 
-Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-handlers-off状态控制。
+Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-holder-off状态控制。
 
 > Message
 >
@@ -92,10 +92,6 @@ Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-handlers-off状
 > - 报错：燃烧功能被禁用。
 > - error：The balance is less than the amount burned.
 > - 报错：余额小于燃烧数量。
-
-```bash
- hashgardcli issue burn [issue-id] [amount] [flags]
-```
 
 
 
@@ -114,11 +110,11 @@ Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-handlers-off状
 > - error：burn-from address does not exist.
 > - 报错：燃烧地址不存在。
 
-```bash
-
-```
 
 
+### transfer-ownership
+
+将通证合约的所有权转移至新的地址账户。仅限于合约本身管理权，不涉及到本账户的通证。
 
 
 
@@ -140,12 +136,6 @@ Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-handlers-off状
 > - 报错：冻结结束时间不正确。
 > - error：Start time cannot be less than end time.
 > - 报错：冻结开始时间必须早于结束时间。
-
-```bash
-
-```
-
-
 
 
 
@@ -171,17 +161,19 @@ Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-handlers-off状
 >
 > 警告：账户没有冻结状态
 
-```bash
-
-```
-
-
-
 
 
 ### mint
 
-Owen增发通证至自己账户。增发数量+现有发行数量不能超过2^64-1。增发数量仅支持正整数。该命令受到--minting-finished状态控制。
+```bash
+ hashgardcli issue mint [issue-id] [amount] [flags]
+```
+
+Owen增发通证至自己账户。增发数量+现有发行数量不能超过2^64-1。增发数量仅支持正整数。该命令受到--minting-finished状态控制。默认增发至自己账户，也可发送至指定账户地址。
+
+| 名称 | 类型   | 是否必须 | 默认值 | 描述                         |
+| ---- | ------ | -------- | ------ | ---------------------------- |
+| --to | string | 否       | ""     | （可选）增发到指定的账号地址 |
 
 > Message
 >
@@ -194,9 +186,15 @@ Owen增发通证至自己账户。增发数量+现有发行数量不能超过2^6
 > - error：mint quantity must be a positive integer.
 > - 报错：增发数量必须为正整数。
 
-```bash
+
+
+#### finish-minting
 
 ```
+ hashgardcli issue finish-minting  [issue-id] [flags]
+```
+
+关闭通证的增发功能。
 
 
 
@@ -278,14 +276,27 @@ hashgardcli bank account foo
 
 
 
+### 添加描述
+
+```bash
+hashgardcli issue describe [issue-id] [description-file]
+```
+
+
+
 #### describe-file
 
 发行通证可用支持描述文件，格式支持json文件，大小不能超过1024字节。
 
 - organization 组织机构或个人名称 。
+
 - Logo  通证项目图标或项目图标，仅支持网址链接。
+
 - website  发行方官方的网站地址。
+
 - description  对于该项目的简单描述。
+
+  
 
 #### 模版
 
@@ -303,7 +314,7 @@ hashgardcli bank account foo
 > - error：describe-file  length cannot exceed 1024.
 > - 报错：文件内容长度不能大于1024。
 > - error：the file must be json。
-> - 报错：文件格式为json。
+> - 报错：文件格式必须为json。
 
 
 
@@ -311,7 +322,9 @@ hashgardcli bank account foo
 
 
 
-> name 支付盒子名称
+> 发行信息
+>
+> name 发行通证名称
 >
 > Issue-address 发行者地址
 >
@@ -321,19 +334,104 @@ hashgardcli bank account foo
 >
 > decimals 小数位精度
 >
-> 
->
 > total-supply 发行总量
 >
 > time  发行时间
 >
-> description 存款盒子描述
+> 
+>
+> description 发行通证描述
 >
 > - logo
-> - org 组织机构或个人
-> - intro   盒子描述
+> - org  组织机构或个人
+> - intro   通证描述
 > - Website 网站地址
 >
+> 
+>
+> disable 
+>
+> - finish-minting //完成增发
+>   - finish 
+>   - no
+> - burn-handlers //普通用户燃烧自己可用通证
+>   - on
+>   - off
+>
+> - burn-Owenr //通证合约所有者燃烧自己可用通证
+>   - on
+>   - off
+> - burn-from //通证合约所有者燃烧用户可用通证
+>   - on
+>   - off
+> - freezeAccount //冻结账户功能
+>   - on
+>   - off
+
+
+
+>freeze-list  //冻结名单
+>
+>- address//冻结地址
+>- time //冻结时间
+>- in/out/both //转入/转出/全部
+
+
+
+>mint-list 增发记录列表
+>
+>time
+>
+>- address
+>- amount
+
+
+
+>Brun-list 燃烧记录
+>
+>time
+>
+>- address //燃烧地址
+>- amount //燃烧数量
+
+
+
+>Holder-list 持有者
+>
+>- address
+>- amount
+
+
+
+>transfer-ownership-list 转移记录
+>
+>- time
+>- From_address
+>- To_address
+
+
+
+### 查询
+
+#### list-issue
+
+查询列表
+
+
+
+#### issue-id
+
+查询指定通证
+
+
+
+#### freeze  
+
+查询冻结名单
+
+
+
+### transfer-ownership  
 
 
 
@@ -341,50 +439,118 @@ hashgardcli bank account foo
 
 
 
-  approve                    Approve spend tokens on behalf of sender //
+ approve                    
 
-  decrease-approval  Decrease approve spend tokens on behalf of sender  //
-
-  increase-approval   Increase approve spend tokens on behalf of sender //
-
-  send-from               Send tokens from one address to another  //发送通证至其他地址
+Approve spend tokens on behalf of sender //
 
 
 
-  create                        Issue a new token  // 创建新的通证
+ decrease-approval  
 
-  describe                    Describe a token  //通证的描述
-
-
+Decrease approve spend tokens on behalf of sender  //
 
 
 
-  disable                      Disable feature from a token  //禁用通证合约部分特性
+ increase-approval   
 
-  burn                          Token holder burn the token  //燃烧自己的通证
-
-  burn-from                Token owner burn the token //通证合约所有者燃烧用户可用余额
-
-  freeze                        Freeze the transfer from a address  //冻结用户的地址
-
-  unfreeze                   UnFreeze the transfer from a address  //解冻用户的地址
-
-  mint                          Mint a token  //增发通证
+Increase approve spend tokens on behalf of sender //
 
 
 
-  transfer-ownership  Transfer ownership a token  //转移合约所有权
+send-from               
+
+Send tokens from one address to another  //发送通证至其他地址
+
+
+
+
+
+ create                       
+
+ Issue a new token  // 创建新的通证
+
+
+
+describe                   
+
+Describe a token  //通证的描述
+
+
+
+
+
+disable                      
+
+Disable feature from a token  //禁用通证合约部分特性
+
+
+
+burn                         
+
+Token holder burn the token  //燃烧自己的通证
+
+
+
+burn-from                
+
+Token owner burn the token //通证合约所有者燃烧用户可用余额
+
+
+
+freeze                       
+
+Freeze the transfer from a address  //冻结用户的地址
+
+
+
+unfreeze                   
+
+UnFreeze the transfer from a address  //解冻用户的地址
+
+
+
+mint                          
+
+Mint a token  //增发通证
+
+
+
+finish-minting
+
+//关闭增发功能
+
+
+
+transfer-ownership  
+
+Transfer ownership a token  //转移合约所有权
 
 ​               
 
-  list-issues                Query issue list      //查询发行列表
+list-issues                
 
-  query-issue             Query a single issue   //查询单个通证
-
-  query-allowance    Query allowance  //查询
-
-  query-freeze           Query freeze   //查询冻结名单
+Query issue list      //查询发行列表
 
 
 
-  search                       Search issues     //搜索通证名称
+query-issue             
+
+Query a single issue   //查询单个通证
+
+
+
+query-allowance    
+
+Query allowance  //查询
+
+
+
+query-freeze           
+
+Query freeze   //查询冻结名单
+
+
+
+search                       
+
+Search issues     //搜索通证符号或名称
