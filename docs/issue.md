@@ -8,7 +8,7 @@
 
 标准同质化Token，该协议提供标准的token创建、转移、以及适合金融企业的高级管理功能：例如增发、冻结/解冻账户、销毁代币、强制转移等功能。
 
-
+<a data-fancybox  href="imges/issue.png">![imges/issue.png](imges/issue.png)</a>
 
 ### 使用方法
 
@@ -26,12 +26,9 @@ hashgardcli issue create [name][symbol][total-supply][flags]
 
 > Message
 >
-> - error：name encoding only supports utf-8.    
-> - 报错：name 编码格式不正确。
-> - error：The length of the name is between 3 and 32. 
-> - 报错：name字符长度应该在3～32。
-> - error：The name cannot be empty.  
-> - 报错：name不能为空。
+> - error：name encoding only supports utf-8.   //name 编码格式不正确。
+> - error：The length of the name is between 3 and 32. //name字符长度应该在3～32。
+> - error：The name cannot be empty.  //name不能为空。
 
 
 
@@ -41,12 +38,9 @@ hashgardcli issue create [name][symbol][total-supply][flags]
 
 > Message
 >
-> - error：symbol only supports 0-9 and A-Z.
-> - 报错：symbol 仅支持大写字母和数字。
-> - error：The length of the symbol is between 2and 8.
-> - 报错：symbol 字符长度为2～8。
-> - error：The symbol cannot be empty.
-> - 报错：symbol 不能为空。
+> - error：symbol only supports 0-9 and A-Z. //symbol 仅支持大写字母和数字。
+> - error：The length of the symbol is between 2and 8. //symbol 字符长度为2～8。
+> - error：The symbol cannot be empty.//symbol 不能为空。
 
 
 
@@ -56,25 +50,20 @@ hashgardcli issue create [name][symbol][total-supply][flags]
 
 > Message
 >
-> - error：total-supply exceeds the upper limit.
-> - 报错：total-supply 发行总量超出上限。
-> - error：total-supply must be a positive integer.
-> - 报错：total-supply 必须为正整数。
-
-
+> - error：total-supply exceeds the upper limit. //total-supply 发行总量超出上限。
+> - error：total-supply must be a positive integer.//total-supply 必须为正整数。
 
 
 
 ### Flags
 
-| 名称               | 类型 | 是否必须 | 默认值 | 描述                                               |
-| ------------------ | ---- | :------: | ------ | -------------------------------------------------- |
-| --decimals         | int  |    否    | 18     | （可选）代币精度，默认18位，最大18位               |
-| --burn-Owenr-off   | bool |    否    | false  | （可选）是否关闭Owenr销毁自己通证                  |
-| -burn-holder-off   | bool |    否    | false  | （可选）是否关闭用户销毁自己通证                   |
-| --burn-from-off    | bool |    否    | false  | （可选）是否关闭Owner可销毁任意账号下该代币的功能  |
-| freezeAccount-off  | bool |    否    | false  | （可选）是否关闭Owen冻结解冻用户该通证转入转出功能 |
-| --minting-finished | bool |    否    | false  | （可选）是否关闭Owen增发权限                       |
+| 名称             | 类型 | 是否必须 | 默认值 | 描述                                              |
+| ---------------- | ---- | :------: | ------ | ------------------------------------------------- |
+| --decimals       | int  |    否    | 18     | （可选）代币精度，默认18位，最大18位              |
+| --burn-Owenr-off | bool |    否    | false  | （可选）是否关闭Owenr销毁自己通证                 |
+| -burn-holder-off | bool |    否    | false  | （可选）是否关闭用户销毁自己通证                  |
+| --burn-from-off  | bool |    否    | false  | （可选）是否关闭Owner可销毁任意账号下该代币的功能 |
+| --minting        | bool |    否    | false  | （可选）是否关闭Owen增发权限                      |
 
 默认不设置为开启状态，操作不可逆，一旦设定或关闭将无法修改。
 
@@ -88,10 +77,8 @@ Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-holder-off状�
 
 > Message
 >
-> - error：Burn is disabled.
-> - 报错：燃烧功能被禁用。
-> - error：The balance is less than the amount burned.
-> - 报错：余额小于燃烧数量。
+> - error：Burn is disabled.//燃烧功能被禁用。
+> - error：The balance is less than the amount burned.//余额小于燃烧数量。
 
 
 
@@ -101,14 +88,10 @@ Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-holder-off状�
 
 > Message
 >
-> - error：Owner mismatch with coin .
-> - 报错：与通证发行着不匹配。
-> - error：Burn-from  is disabled.
-> - 报错：燃烧用户余额功能被禁用。
-> - error：The balance is less than the amount burned.
-> - 报错：余额小于燃烧数量。
-> - error：burn-from address does not exist.
-> - 报错：燃烧地址不存在。
+> - error：Owner mismatch with coin .//与通证发行者不匹配。
+> - error：Burn-from  is disabled.//燃烧用户余额功能被禁用。
+> - error：The balance is less than the amount burned.//余额小于燃烧数量。
+> - error：burn-from address does not exist.//燃烧地址不存在。
 
 
 
@@ -124,18 +107,12 @@ Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-holder-off状�
 
 > Message
 >
-> - error：You are not the owen of the token.
-> - 报错：你不是该通证的Owen。
-> - error：freezeAccount is disabled.
-> - 报错：冻结账户功能被禁用。
-> - error：freezeAccount does not exist.
-> - 报错：冻结账户不存在。
-> - error：starting time.
-> - 报错：冻结开始时间不正确。
-> - error：end time.
-> - 报错：冻结结束时间不正确。
-> - error：Start time cannot be less than end time.
-> - 报错：冻结开始时间必须早于结束时间。
+> - error：Owner mismatch with coin .//与通证发行者不匹配。
+> - error：freezeAccount is disabled.//冻结账户功能被禁用。
+> - error：freezeAccount does not exist.//冻结账户不存在。
+> - error：starting time.//冻结开始时间不正确。
+> - error：end time.//冻结结束时间不正确。
+> - error：Start time cannot be less than end time.//冻结开始时间必须早于结束时间。
 
 
 
@@ -145,21 +122,14 @@ Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-holder-off状�
 
 > Message
 >
-> error：You are not the owen of the token.
+> error：Owner mismatch with coin .//与通证发行者不匹配。
 >
-> 报错：你不是该通证的Owen。
+> error：unfreezeAccount is disable.//解冻功能被禁用。
 >
-> error：unfreezeAccount is disable.
+> error：unfreezeAccount does not exist.//解冻账户不存在
 >
-> 报错：解冻功能被禁用。
+> Warning：account is not freeze.//账户没有冻结状态
 >
-> error：unfreezeAccount does not exist.
->
-> 报错：解冻账户不存在
->
-> Warning：account is not freeze.
->
-> 警告：账户没有冻结状态
 
 
 
@@ -177,14 +147,10 @@ Owen增发通证至自己账户。增发数量+现有发行数量不能超过2^6
 
 > Message
 >
-> - error：You are not the owen of the token.
-> - 报错：你不是该通证的Owen。
-> - error：minting  is disabled.
-> - 报错：增发功能被禁用。
-> - error：total-supply exceeds the upper limit.
-> - 报错：供应总量超出发行上限。
-> - error：mint quantity must be a positive integer.
-> - 报错：增发数量必须为正整数。
+> - error：Owner mismatch with coin .//与通证发行者不匹配。
+> - error：minting  is disabled.//增发功能被禁用。
+> - error：total-supply exceeds the upper limit.//供应总量超出发行上限。
+> - error：mint quantity must be a positive integer.//增发数量必须为正整数。
 
 
 
@@ -196,7 +162,9 @@ Owen增发通证至自己账户。增发数量+现有发行数量不能超过2^6
 
 关闭通证的增发功能。
 
-
+> Message
+>
+> - error：Owner mismatch with coin .//与通证发行者不匹配。
 
 ### 例子
 
@@ -288,13 +256,13 @@ hashgardcli issue describe [issue-id] [description-file]
 
 发行通证可用支持描述文件，格式支持json文件，大小不能超过1024字节。
 
-- organization 组织机构或个人名称 。
+- org //组织机构或个人名称 。
 
-- Logo  通证项目图标或项目图标，仅支持网址链接。
+- Logo  //通证项目图标或项目图标，仅支持网址链接。
 
-- website  发行方官方的网站地址。
+- website  //发行方官方的网站地址。
 
-- description  对于该项目的简单描述。
+- intro  //对于该项目的简单描述。
 
   
 
@@ -302,19 +270,17 @@ hashgardcli issue describe [issue-id] [description-file]
 
 ```json
 {
-    "organization":"Hashgard",
+    "org":"Hashgard",
     "website":"https://www.hashgard.com",
     "logo":"https://cdn.hashgard.com/static/logo.2d949f3d.png",
-    "description":"新一代金融公有链" 
+    "intro":"新一代金融公有链" 
 }
 ```
 
 > Message
 >
-> - error：describe-file  length cannot exceed 1024.
-> - 报错：文件内容长度不能大于1024。
-> - error：the file must be json。
-> - 报错：文件格式必须为json。
+> - error：describe-file  length cannot exceed 1024.//文件内容长度不能大于1024。
+> - error：the file must be json。//文件格式必须为json。
 
 
 
@@ -324,36 +290,36 @@ hashgardcli issue describe [issue-id] [description-file]
 
 > 发行信息
 >
-> name 发行通证名称
+> name //发行通证名称
 >
-> Issue-address 发行者地址
+> Issue-address //发行者地址
 >
-> symbol 令牌符号
+> symbol //令牌符号
 >
-> owenr 发行合约所有者地址
+> owenr //发行合约所有者地址
 >
-> decimals 小数位精度
+> decimals //小数位精度
 >
-> total-supply 发行总量
+> total-supply //发行总量
 >
-> time  发行时间
+> time  //发行时间
 >
 > 
 >
-> description 发行通证描述
+> description //发行通证描述
 >
 > - logo
-> - org  组织机构或个人
-> - intro   通证描述
-> - Website 网站地址
+> - org  //组织机构或个人
+> - intro   //通证描述
+> - Website //网站地址
 >
 > 
 >
 > disable 
 >
-> - finish-minting //完成增发
->   - finish 
->   - no
+> - minting //增发功能
+>   - on
+>   - off
 > - burn-handlers //普通用户燃烧自己可用通证
 >   - on
 >   - off
@@ -378,40 +344,40 @@ hashgardcli issue describe [issue-id] [description-file]
 
 
 
->mint-list 增发记录列表
+>mint-list //增发记录列表
 >
 >time
 >
->- address
->- amount
+>- address //增发地址
+>- amount//增发数量
 
 
 
->Brun-list 燃烧记录
+>Brun-list //燃烧记录列表
 >
->time
+>time//燃烧时间
 >
 >- address //燃烧地址
 >- amount //燃烧数量
 
 
 
->Holder-list 持有者
+>Holder-list //持有者列表
 >
->- address
->- amount
+>- address //持有地址
+>- amount //持有数量
 
 
 
 >transfer-ownership-list 转移记录
 >
->- time
->- From_address
+>- time //转移时间
+>- From_address 
 >- To_address
 
 
 
-### 查询
+### 查询或搜索
 
 #### list-issue
 
@@ -431,126 +397,129 @@ hashgardcli issue describe [issue-id] [description-file]
 
 
 
-### transfer-ownership  
+## 命令帮助
 
 
 
-### 命令帮助
+### 发行命令
 
+#### create                       
 
+ Issue a new token  // 创建通证
 
- approve                    
-
-Approve spend tokens on behalf of sender //
-
-
-
- decrease-approval  
-
-Decrease approve spend tokens on behalf of sender  //
-
-
-
- increase-approval   
-
-Increase approve spend tokens on behalf of sender //
-
-
-
-send-from               
-
-Send tokens from one address to another  //发送通证至其他地址
-
-
-
-
-
- create                       
-
- Issue a new token  // 创建新的通证
-
-
-
-describe                   
+#### describe                   
 
 Describe a token  //通证的描述
 
 
 
+### 不可逆功能设置
+
+#### disable                      
+
+Disable feature from a token  //设置通证合约功能，该操作不可逆
+
+Token Owner disabled the features:  //所有不可逆的功能设置命令
+
+#### burn-owner
+
+Token owner can burn the token //合约所有者燃烧自己的可用通证
+
+#### burn-holder
+
+Token holder can burn the token //普通用户燃烧自己的可用通证
+
+#### burn-from
+
+Token owner can burn the token from any holder //合约所有者燃烧普通用户的可用通证
+
+#### freeze
+
+Token owner can freeze in and out the token from any address //合约所有者冻结用户该通证的转入和转出功能
+
+#### minting
+
+Token owner can mint the token //合约管理者增发通证
 
 
-disable                      
 
-Disable feature from a token  //禁用通证合约部分特性
+### 基础功能
 
+#### approve                    
 
+Approve spend tokens on behalf of sender //
 
-burn                         
+#### decrease-approval  
+
+Decrease approve spend tokens on behalf of sender  //
+
+#### increase-approval   
+
+Increase approve spend tokens on behalf of sender //
+
+#### send-from               
+
+Send tokens from one address to another  //发送通证至其他地址
+
+#### lock
+
+Lock amount //用户自己锁定用户的部分或者全部通证
+
+### 高级功能
+
+#### burn                         
 
 Token holder burn the token  //燃烧自己的通证
 
-
-
-burn-from                
+#### burn-from                
 
 Token owner burn the token //通证合约所有者燃烧用户可用余额
 
-
-
-freeze                       
+#### freeze                       
 
 Freeze the transfer from a address  //冻结用户的地址
 
-
-
-unfreeze                   
+#### unfreeze                   
 
 UnFreeze the transfer from a address  //解冻用户的地址
 
-
-
-mint                          
+#### mint                          
 
 Mint a token  //增发通证
 
-
-
-finish-minting
+#### finish-minting
 
 //关闭增发功能
 
-
-
-transfer-ownership  
+#### transfer-ownership  
 
 Transfer ownership a token  //转移合约所有权
 
-​               
 
-list-issues                
+
+###  搜索和查询               
+
+
+
+#### list-issues                
 
 Query issue list      //查询发行列表
 
-
-
-query-issue             
+#### query-issue             
 
 Query a single issue   //查询单个通证
 
-
-
-query-allowance    
+#### query-allowance    
 
 Query allowance  //查询
 
-
-
-query-freeze           
+#### query-freeze           
 
 Query freeze   //查询冻结名单
 
-
-
-search                       
+#### search   
 
 Search issues     //搜索通证符号或名称
+
+
+
