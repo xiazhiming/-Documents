@@ -525,7 +525,7 @@ transfer-ownership
 
 Transfer ownership a token  //转移合约所有权
 
-​               
+             
 
 list-issues                
 
