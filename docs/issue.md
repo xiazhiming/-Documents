@@ -71,7 +71,7 @@ hashgardcli issue create [name][symbol][total-supply][flags]
 | ------------------ | ---- | :------: | ------ | -------------------------------------------------- |
 | --decimals         | int  |    否    | 18     | （可选）代币精度，默认18位，最大18位               |
 | --burn-Owenr-off   | bool |    否    | false  | （可选）是否关闭Owenr销毁自己通证                  |
-| -burn-handlers-off | bool |    否    | false  | （可选）是否关闭用户销毁自己通证                   |
+| -burn-holder-off   | bool |    否    | false  | （可选）是否关闭用户销毁自己通证                   |
 | --burn-from-off    | bool |    否    | false  | （可选）是否关闭Owner可销毁任意账号下该代币的功能  |
 | freezeAccount-off  | bool |    否    | false  | （可选）是否关闭Owen冻结解冻用户该通证转入转出功能 |
 | --minting-finished | bool |    否    | false  | （可选）是否关闭Owen增发权限                       |
@@ -300,8 +300,8 @@ hashgardcli bank account foo
 
 > Message
 >
-> - error：file size cannot exceed 1024 byte.
-> - 报错：file文件大小不能大于1024byte。
+> - error：describe-file  length cannot exceed 1024.
+> - 报错：文件内容长度不能大于1024。
 > - error：the file must be json。
 > - 报错：文件格式为json。
 
@@ -334,5 +334,57 @@ hashgardcli bank account foo
 > - intro   盒子描述
 > - Website 网站地址
 >
-> 
 
+
+
+### 命令帮助
+
+
+
+  approve                    Approve spend tokens on behalf of sender //
+
+  decrease-approval  Decrease approve spend tokens on behalf of sender  //
+
+  increase-approval   Increase approve spend tokens on behalf of sender //
+
+  send-from               Send tokens from one address to another  //发送通证至其他地址
+
+
+
+  create                        Issue a new token  // 创建新的通证
+
+  describe                    Describe a token  //通证的描述
+
+
+
+
+
+  disable                      Disable feature from a token  //禁用通证合约部分特性
+
+  burn                          Token holder burn the token  //燃烧自己的通证
+
+  burn-from                Token owner burn the token //通证合约所有者燃烧用户可用余额
+
+  freeze                        Freeze the transfer from a address  //冻结用户的地址
+
+  unfreeze                   UnFreeze the transfer from a address  //解冻用户的地址
+
+  mint                          Mint a token  //增发通证
+
+
+
+  transfer-ownership  Transfer ownership a token  //转移合约所有权
+
+​               
+
+  list-issues                Query issue list      //查询发行列表
+
+  query-issue             Query a single issue   //查询单个通证
+
+  query-allowance    Query allowance  //查询
+
+  query-freeze           Query freeze   //查询冻结名单
+
+
+
+  search                       Search issues     //搜索通证名称
