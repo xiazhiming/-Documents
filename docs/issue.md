@@ -38,8 +38,8 @@ hashgardcli issue create [name][symbol][total-supply][flags]
 
 > Message
 >
-> - error：symbol only supports 0-9 and A-Z. //symbol 仅支持大写字母和数字。
-> - error：The length of the symbol is between 2and 8. //symbol 字符长度为2～8。
+> - error：symbol only supports numbers and capital letters. //symbol 仅支持大写字母和数字。
+> - error：The length of the symbol is between 2 and 8. //symbol 字符长度为2～8。
 > - error：The symbol cannot be empty.//symbol 不能为空。
 
 
@@ -77,7 +77,7 @@ Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-holder-off状�
 
 > Message
 >
-> - error：Burn is disabled.//燃烧功能被禁用。
+> - error：Burn token function is disabled.//燃烧功能被禁用。
 > - error：The balance is less than the amount burned.//余额小于燃烧数量。
 
 
@@ -89,7 +89,7 @@ Owen 销毁受--burn-Owen-off状态控制。用户销毁受-burn-holder-off状�
 > Message
 >
 > - error：Owner mismatch with coin .//与通证发行者不匹配。
-> - error：Burn-from  is disabled.//燃烧用户余额功能被禁用。
+> - error：Burn-from function is disabled.//燃烧用户余额功能被禁用。
 > - error：The balance is less than the amount burned.//余额小于燃烧数量。
 > - error：burn-from address does not exist.//燃烧地址不存在。
 
@@ -409,37 +409,37 @@ hashgardcli issue describe [issue-id] [description-file]
 
 #### describe                   
 
-Describe a token  //通证的描述
+Token description  //通证的描述
 
 
 
 ### 不可逆功能设置
 
-#### disable                      
+#### Irreversible Functions                     
 
-Disable feature from a token  //设置通证合约功能，该操作不可逆
+Token smart contract setup, irreversible. //设置通证合约功能，该操作不可逆
 
-Token Owner disabled the features:  //所有不可逆的功能设置命令
+Irreversible functions:  //所有不可逆的功能设置命令
 
 #### burn-owner
 
-Token owner can burn the token //合约所有者燃烧自己的可用通证
+Burn the token by token owner //合约所有者燃烧自己的可用通证
 
 #### burn-holder
 
-Token holder can burn the token //普通用户燃烧自己的可用通证
+Burn token by token holder //普通用户燃烧自己的可用通证
 
 #### burn-from
 
-Token owner can burn the token from any holder //合约所有者燃烧普通用户的可用通证
+Burn token from any holder by token owner //合约所有者燃烧普通用户的可用通证
 
 #### freeze
 
-Token owner can freeze in and out the token from any address //合约所有者冻结用户该通证的转入和转出功能
+Freeze transfer token in and transfer token out by token owner //合约所有者冻结用户该通证的转入和转出功能
 
 #### minting
 
-Token owner can mint the token //合约管理者增发通证
+Token owner can mint additional token //合约管理者增发通证
 
 
 
@@ -447,7 +447,7 @@ Token owner can mint the token //合约管理者增发通证
 
 #### approve                    
 
-Approve spend tokens on behalf of sender //
+Approve spend tokens on behalf of sender // 
 
 #### decrease-approval  
 
@@ -463,37 +463,37 @@ Send tokens from one address to another  //发送通证至其他地址
 
 #### lock
 
-Lock amount //用户自己锁定用户的部分或者全部通证
+Lock up part of or all the tokens //用户自己锁定用户的部分或者全部通证
 
 ### 高级功能
 
 #### burn                         
 
-Token holder burn the token  //燃烧自己的通证
+Burn token by token holder //燃烧自己的通证
 
 #### burn-from                
 
-Token owner burn the token //通证合约所有者燃烧用户可用余额
+Burn all the available token of token holders by token owner //通证合约所有者燃烧用户可用余额
 
 #### freeze                       
 
-Freeze the transfer from a address  //冻结用户的地址
+Freeze transfer function of a certain address  //冻结用户的地址
 
 #### unfreeze                   
 
-UnFreeze the transfer from a address  //解冻用户的地址
+UnFreeze transfer function of a certain address  //解冻用户的地址
 
 #### mint                          
 
-Mint a token  //增发通证
+Mint additional token  //增发通证
 
 #### finish-minting
 
-//关闭增发功能
+Disable mint function//关闭增发功能
 
 #### transfer-ownership  
 
-Transfer ownership a token  //转移合约所有权
+Transfer the ownership of a token  //转移合约所有权
 
 
 
@@ -503,23 +503,23 @@ Transfer ownership a token  //转移合约所有权
 
 #### list-issues                
 
-Query issue list      //查询发行列表
+Query token issuance list      //查询发行列表
 
 #### query-issue             
 
-Query a single issue   //查询单个通证
+Query a single token   //查询单个通证
 
 #### query-allowance    
 
-Query allowance  //查询
+Query //查询
 
 #### query-freeze           
 
-Query freeze   //查询冻结名单
+Query frozen address list //查询冻结名单
 
 #### search   
 
-Search issues     //搜索通证符号或名称
+Search Token    //搜索通证符号或名称
 
 
 
