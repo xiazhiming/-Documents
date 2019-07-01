@@ -55,18 +55,17 @@
 <a data-fancybox  href="imges/recording.png">![imges/recording.png](imges/recording.png)</a>
 
 ### 存证
-
-
-
-```bash
-hashgardcli recording [name][content][author] --from --memo
+```shell
+hashgardcli Recording [name] [type] [content] --from --author --memo
 ```
-
-
 
 #### name
 
-存证内容标题
+存证内容名称
+
+#### type
+
+存证类型
 
 #### content
 
@@ -74,7 +73,7 @@ hashgardcli recording [name][content][author] --from --memo
 
 #### authorID
 
-存证作者
+存证作者ID
 
 #### from_address
 
@@ -93,13 +92,14 @@ hashgardcli recording [name][content][author] --from --memo
   "URL":"https://www.hashgard.com",//内容原地址
   "Summary":"与cosmos合作备忘录",//摘要
   "author":"苏轼",//作者
-  "Signature":"863dc8596f1f7c9c34d86d1c4885d186e18033fa67288d83e9a1a3edd4e6\
- 6e442c2d071254e47d8d89da86b221b0e8f8f9f0f63815404f57f9b5a808b1496c9b1b" //数字签名
  "Public key":"02e74c607a90bc1f64dbf7c35065721399163a56fa9580985a292f9e7c015ebe57",//公钥
+ "Crossing type":"eth", //交叉验证类型
+ "Cross-validation":"0xkfjoiqweipoasfkjwe9023jqlskajflkqw2jinkfj34oij"//交叉验证结果
 }
 ```
+#### algorithm
 
-
+加密算法
 
 #### time
 
@@ -113,9 +113,11 @@ hashgardcli recording [name][content][author] --from --memo
 
 交易hash
 
-
-
-### 查询
-
-#### 
-
+### Query list
+查询存证列表
+### Query
+查询指定的
+### Query account
+按提交账户地址进行查询
+### Query account authorID
+按照提交账户地址的作者id进行查询
