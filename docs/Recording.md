@@ -67,6 +67,9 @@ hashgardcli Recording [name] [type] [content] --from --author --memo
 
 存证类型
 
+#### serial_number
+流水编号
+
 #### content
 
 需要存储的内容哈希
